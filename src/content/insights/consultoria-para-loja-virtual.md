@@ -34,6 +34,10 @@ chamada:
   titulo: "Descubra o gargalo real antes de contratar qualquer coisa"
   texto: "Uma hora de análise gratuita comigo. A gente olha a sua operação, nomeia onde está travando e define as prioridades dos próximos 90 dias. Sem compromisso."
 feedYoutube: true
+categoria: "servicos"
+cardSelo: "Consultoria · Plataforma"
+cardTitulo: "Consultoria para loja virtual"
+cardTexto: "As travas de Nuvemshop, Shopify e afins que nenhuma verba de mídia resolve."
 ---
 
 Quem chama a operação de "loja virtual" quase sempre está numa plataforma pronta, Nuvemshop, Shopify, Tray, Loja Integrada. Isso é ótimo para começar rápido, mas cria um conjunto de travas específicas que nenhuma verba de mídia resolve. Uma boa consultoria para loja virtual olha essas travas antes de falar em anúncio.

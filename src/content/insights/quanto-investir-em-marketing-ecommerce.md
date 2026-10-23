@@ -23,6 +23,9 @@ faq:
     a: "Só depois de identificar a causa. Se o problema for precificação, frete ou mix, cortar mídia reduz o faturamento sem melhorar o lucro."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "trafego"
+cardSelo: "Tráfego pago · Guia"
+cardTexto: "A faixa de referência, a conta correta pela margem e a escolha entre crescer e lucrar, por que copiar o benchmark de outra loja não funciona."
 ---
 
 Existe uma faixa de referência de mercado, e ela é útil como ponto de partida. Mas o número correto para a sua loja não vem de benchmark: vem da sua margem de contribuição e do seu objetivo, crescer ou lucrar. Este guia mostra a faixa, a conta correta e como decidir entre os dois objetivos.

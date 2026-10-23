@@ -35,6 +35,9 @@ chamada:
   titulo: "Pronto para testar o novo sem gastar às cegas"
   texto: "Uma hora de análise gratuita comigo. A gente confere se o seu pixel, o seu feed e a sua base estão prontos, e o que priorizar antes de entrar em um canal novo."
 feedYoutube: true
+categoria: "trafego"
+cardTitulo: "ChatGPT Ads: o que muda para o seu e-commerce"
+cardTexto: "Como funciona o gerenciador de anúncios da OpenAI, por que a entrega é por intenção e o que fazer para preparar a sua operação."
 ---
 
 A OpenAI abriu um gerenciador de anúncios dentro do ChatGPT, e eu fui avaliar como funciona antes de sair recomendando. Este texto é a minha leitura de consultoria: o que é, o que realmente muda para quem vende online e o que dá para fazer agora, sem correr atrás de hype nem ignorar o que está vindo.

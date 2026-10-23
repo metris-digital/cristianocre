@@ -29,6 +29,8 @@ chamada:
   numeroLegenda: "análise gratuita da sua operação"
   botao: "Fazer meu diagnóstico"
   nota: "Gratuito e sem compromisso."
+categoria: "ecommerce"
+cardTexto: "Triplicou o investimento e as vendas não se mexeram? O gargalo está depois do lead — e o motivo de perda do CRM mostra onde."
 ---
 
 Toda semana eu tenho a mesma conversa com quem lidera e-commerce e vendas: o time de marketing está entregando lead, o investimento subiu, e o número de vendas não se mexeu. A conclusão automática é que a mídia parou de funcionar. Quase nunca é isso. Este guia mostra onde olhar.

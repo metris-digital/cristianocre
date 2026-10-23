@@ -99,6 +99,17 @@ const post = z.object({
       })
       .default({}),
 
+    // Card na lista do /insights (e do /podcast). Categoria é o filtro;
+    // selo, título e texto em branco usam os do post.
+    categoria: z.enum(['ecommerce', 'trafego', 'mentoria', 'servicos', 'podcast']),
+    cardSelo: z.string().optional(),
+    cardTitulo: z.string().optional(),
+    cardTexto: z.string().optional(),
+
+    // Seção do llms.txt em que o post entra se ainda não estiver lá. O
+    // nome precisa ser igual ao título da seção (sem o ##).
+    secaoLlms: z.string().optional(),
+
     feedYoutube: z.boolean().default(false),
     draft: z.boolean().default(false),
 });

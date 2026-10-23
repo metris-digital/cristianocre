@@ -34,6 +34,9 @@ chamada:
   titulo: "Descubra o gargalo real antes de contratar qualquer coisa"
   texto: "Uma hora de análise gratuita comigo. A gente olha a sua operação, nomeia onde está travando e define as prioridades dos próximos 90 dias. Sem compromisso."
 feedYoutube: true
+categoria: "servicos"
+cardSelo: "Consultoria · Papel"
+cardTexto: "O que esperar de um consultor, o que não é papel dele e como diferenciar do vendedor."
 ---
 
 Consultor de e-commerce virou um título que qualquer um usa, então antes de contratar vale separar o que um bom consultor realmente entrega do que ele não deveria prometer. Este texto é para quem vai contratar um consultor, não para quem quer virar um.

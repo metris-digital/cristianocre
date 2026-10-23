@@ -1,0 +1,43 @@
+---
+// Card de um post na lista do /insights e do /podcast.
+import { existsSync } from 'node:fs';
+import type { Post } from '../lib/posts';
+import { titulo } from '../lib/posts';
+
+interface Props {
+  post: Post;
+  // "10 set 2026" no /insights, "2 de agosto de 2026" no /podcast.
+  data: string;
+  // Sem categoria, o card não entra no filtro (página do /podcast).
+  comCategoria?: boolean;
+}
+
+const { post, data, comCategoria = true } = Astro.props;
+const d = post.data;
+const episodio = post.collection === 'podcast';
+const alt = d.capaAlt ?? titulo(post);
+const webp = d.imagem.replace(/\.jpg$/, '.webp');
+// WebP só quando o arquivo existe (o build roda na raiz do projeto).
+const temWebp = existsSync(`public${webp}`);
+---
+<a class="icard reveal" data-cat={comCategoria ? d.categoria : undefined} href={`/${post.id}`}>
+  <span class="ithumb">
+    {temWebp
+      ? <picture>
+          <source srcset={webp} type="image/webp">
+          <img src={d.imagem} alt={alt} width="1200" height="675" loading="lazy" decoding="async">
+        </picture>
+      : <img src={d.imagem} alt={alt} width="1200" height="675" loading="lazy" decoding="async">}
+  </span>
+  <span class="ibody">
+    <span class="ichip">{d.cardSelo ?? d.selo}</span>
+    <h2>{d.cardTitulo ?? titulo(post)}</h2>
+    <p set:html={d.cardTexto ?? d.description} />
+    <span class="imeta">
+      <span class="mt">{d.leitura} min de leitura</span>
+      <span class="dot-sep">&middot;</span>
+      <span class="mt">{data}</span>
+      <span class="igo">{episodio ? 'Ler o episódio' : 'Ler'} <span class="ar">&#8594;</span></span>
+    </span>
+  </span>
+</a>

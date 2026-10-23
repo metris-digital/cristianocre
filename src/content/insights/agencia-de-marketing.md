@@ -24,6 +24,8 @@ faq:
     a: "Para a maioria das empresas que quer crescer com consistência, sim. A agência dá acesso a um time completo de especialistas por uma fração do custo de montá-lo internamente, e costuma se pagar pelo retorno que gera."
 chamada:
   link: "https://metris.digital/form/"
+categoria: "servicos"
+cardTexto: "O guia completo para entender o que uma agência de marketing realmente entrega, e como escolher a parceira que vai fazer o seu negócio crescer com previsibilidade."
 ---
 
 A maioria das empresas que procura uma **agência de marketing** chega com a mesma frustração: já tentou fazer sozinha, já impulsionou post, talvez até já contratou alguém, e o resultado nunca veio do jeito que esperava. Se isso soa familiar, o problema raramente é o seu produto. É a falta de uma estrutura que conecte estratégia, execução e resultado. Neste guia, você vai entender exatamente o que uma agência de marketing faz, quais tipos existem, quanto custa e como escolher a parceira certa para o seu momento.

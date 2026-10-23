@@ -34,6 +34,10 @@ chamada:
   titulo: "Descubra o gargalo real antes de contratar qualquer coisa"
   texto: "Uma hora de análise gratuita comigo. A gente olha a sua operação, nomeia onde está travando e define as prioridades dos próximos 90 dias. Sem compromisso."
 feedYoutube: true
+categoria: "servicos"
+cardSelo: "Consultoria · Porte"
+cardTitulo: "Consultoria de comércio eletrônico"
+cardTexto: "O mesmo serviço para operação estruturada: integrações, multicanal e governança de dados."
 ---
 
 Consultoria de comércio eletrônico e consultoria de e-commerce são a mesma coisa no fundo, mas quem digita "comércio eletrônico" costuma ser um perfil de operação diferente de quem digita "e-commerce". E esse perfil pede um recorte específico de apoio. Vou explicar qual.

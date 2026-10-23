@@ -31,6 +31,8 @@ faq:
 chamada:
   titulo: "Faltam menos de quatro meses. Dá tempo, se começar agora."
   texto: "Receba uma análise gratuita do seu e-commerce e descubra quais das sete frentes estão mais frágeis na sua operação, enquanto ainda dá para corrigir."
+categoria: "ecommerce"
+cardTexto: "As datas de 2026, as sete frentes que decidem o resultado e o cronograma de 90, 60 e 30 dias para chegar preparado."
 ---
 
 Todo ano a mesma cena se repete. Em novembro o dono da loja decide o desconto olhando o que o concorrente está fazendo, sobe a verba na semana da data, vende bem, comemora, e em dezembro descobre que o mês fechou com faturamento recorde e lucro menor que o de setembro. O problema não foi a Black Friday, foi o momento em que as decisões foram tomadas. Este guia mostra as sete frentes que decidem o resultado da data e o cronograma para resolver cada uma enquanto ainda dá tempo.

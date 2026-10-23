@@ -29,6 +29,8 @@ chamada:
   numeroLegenda: "análise gratuita da sua operação"
   botao: "Fazer meu diagnóstico"
   nota: "Gratuito e sem compromisso."
+categoria: "trafego"
+cardTexto: "A busca mudou de refinamento por palavra-chave para pergunta única. Mas o que decide a recomendação continua sendo reputação."
 ---
 
 Eu voltei do maior evento de e-commerce do país com uma conclusão desconfortável: ninguém sabe exatamente como isso vai terminar. Não é falta de estudo — é que a jornada de compra está mudando ao mesmo tempo em que todo mundo tenta vender a solução definitiva para ela. Este guia separa o que mudou de verdade do que é barulho.

@@ -41,6 +41,9 @@ chamada:
   titulo: "O que esse episódio ensina serve para a sua operação?"
   texto: "Em uma hora de análise gratuita comigo, a gente olha a sua loja do mesmo jeito que eu olho a dos convidados: onde está o gargalo real e o que muda o resultado nos próximos 90 dias."
 feedYoutube: true
+categoria: "podcast"
+cardTitulo: "iBob: como vender motor elétrico e automação industrial online"
+cardTexto: "Myron Bercker, da iBob, sobre traduzir o produto técnico para a busca do cliente, profissionalizar a logística e medir margem em vez de faturamento."
 ---
 
 Motor elétrico pela internet parecia impossível até pouco tempo atrás. Myron trabalhou 14 anos dentro de uma fábrica de motores e, olhando os dados dos clientes, descobriu que dava, sim, para vender um produto técnico e caro no digital. Esse episódio é sobre transformar produto de indústria em venda online, e sobre por que profissionalizar a operação desde o dia um é o que separa quem escala de quem faz um voo de galinha.

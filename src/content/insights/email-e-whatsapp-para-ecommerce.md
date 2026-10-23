@@ -27,6 +27,8 @@ faq:
 chamada:
   titulo: "Meça a sua independência de leilão"
   texto: "Receba uma análise gratuita do seu e-commerce e descubra quanto da sua receita já vem de canal próprio e o que fazer para subir."
+categoria: "ecommerce"
+cardTexto: "A métrica que mede a sua independência de leilão, e o que fazer para ela subir."
 ---
 
 Toda loja acompanha custo de aquisição. Poucas acompanham qual percentual da receita não dependeu de aquisição nenhuma. Essa segunda métrica costuma explicar melhor por que uma operação respira e outra sufoca, porque ela mede a única parte do faturamento que não fica mais cara quando o mercado esquenta.

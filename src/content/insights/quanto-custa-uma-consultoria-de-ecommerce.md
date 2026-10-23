@@ -34,6 +34,9 @@ chamada:
   titulo: "Descubra o gargalo real antes de contratar qualquer coisa"
   texto: "Uma hora de análise gratuita comigo. A gente olha a sua operação, nomeia onde está travando e define as prioridades dos próximos 90 dias. Sem compromisso."
 feedYoutube: true
+categoria: "servicos"
+cardSelo: "Consultoria · Custo"
+cardTexto: "Os modelos de cobrança, o que faz o preço variar e por que o mais barato costuma sair caro."
 ---
 
 Não existe uma tabela única de consultoria de e-commerce, e desconfie de quem te dá um preço fechado antes de entender a sua operação. O que existe são modelos de cobrança e um punhado de fatores que mexem no valor. Vou te mostrar os dois, para você comparar propostas sabendo o que está comparando.

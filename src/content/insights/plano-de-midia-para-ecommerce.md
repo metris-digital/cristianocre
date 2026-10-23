@@ -26,6 +26,8 @@ faq:
     a: "Porque no início ninguém conhece a marca e o funil está vazio. O topo traz público novo e alimenta o Pixel e o Google com dados, o que torna as campanhas de conversão muito mais eficientes depois. Sem dados, é impossível otimizar."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "trafego"
+cardTexto: "Como montar o plano de mídia do seu e-commerce: da meta à divisão de verba por canal e funil, as campanhas certas e como prever o faturamento."
 ---
 
 A maioria das lojas começa a investir em anúncio pelo lugar errado: abre o Gerenciador, sobe algumas campanhas e espera vender. Três semanas depois, a leitura é sempre a mesma, "a mídia não está funcionando". Quase nunca o problema é a mídia. É a falta de um **plano de mídia para e-commerce**, o documento que liga a verba a uma meta e diz, com antecedência, quanto a loja deve faturar.

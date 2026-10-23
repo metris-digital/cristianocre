@@ -23,6 +23,8 @@ faq:
     a: "Não antes de diagnosticar. Cortar verba sem saber a causa costuma piorar o problema, porque reduz o volume de dados e o aprendizado das campanhas. Rode o roteiro primeiro e só ajuste o investimento depois de saber o que caiu."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "trafego"
+cardSelo: "Tráfego pago · Guia"
 ---
 
 Quando o **ROAS caiu**, a pergunta certa não é “o que faço agora?”, é “o que exatamente mudou?”. A queda quase nunca tem causa única, e cada causa possível pede uma ação diferente. Mexer na campanha antes de diagnosticar é apostar. Este guia é um roteiro sequencial e verificável: 7 passos, na ordem da causa mais frequente para a menos frequente, dizendo o que checar em cada um e quanto tempo leva. Você segue de cima para baixo e para assim que encontra o culpado.

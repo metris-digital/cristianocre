@@ -43,6 +43,8 @@ chamada:
   selo: "Diagnóstico 360"
   titulo: "A sua operação sustenta o modelo que você quer rodar?"
   texto: "Lançamento semanal, marketplace, loja física. Antes de escolher o modelo, vale saber o que a sua operação aguenta hoje. Em uma hora de análise gratuita a gente descobre isso junto."
+categoria: "podcast"
+cardTexto: "Daniel Bossle conta a virada da marca gaúcha, por que só um marketplace funcionou e o teste de foto que quase dobrou a conversão."
 ---
 
 Tem uma decisão nesse episódio que vale por qualquer aula de e-commerce de moda: a Senplo trocou duas coleções por ano por um lançamento por semana. Não foi uma mudança de calendário, foi uma mudança de modelo de negócio, e ela reorganizou produção, estoque, conteúdo, mídia e recompra ao mesmo tempo. Daniel Bossle, cofundador da marca, conta como chegaram lá, o que não deu certo antes e o teste de página de produto que quase dobrou a conversão.

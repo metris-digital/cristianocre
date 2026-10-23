@@ -23,6 +23,8 @@ faq:
     a: "A agência executa e gere. A consultoria diagnostica e orienta. Falta direção, comece pela consultoria. Falta braço, a agência resolve."
 chamada:
   link: "https://metris.digital/form/"
+categoria: "ecommerce"
+cardTexto: "O parceiro de execução especializado em loja virtual: tráfego, conversão, dados e recompra, com foco em margem."
 ---
 
 Vender em loja virtual não é a mesma coisa que vender serviço ou gerar lead. O jogo é outro: margem apertada, frete que come o lucro, carrinho abandonado, ticket médio que precisa subir e um catálogo inteiro disputando o orçamento de mídia. Por isso uma agência generalista raramente dá conta de um e-commerce. É aí que entra a agência de e-commerce. Este guia explica o que ela faz, quanto custa, como se diferencia de uma agência comum e como escolher a certa para escalar a sua loja sem queimar caixa.

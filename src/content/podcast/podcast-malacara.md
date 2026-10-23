@@ -41,6 +41,9 @@ chamada:
   titulo: "O que esse episódio ensina serve para a sua operação?"
   texto: "Em uma hora de análise gratuita comigo, a gente olha a sua loja do mesmo jeito que eu olho a dos convidados: onde está o gargalo real e o que muda o resultado nos próximos 90 dias."
 feedYoutube: true
+categoria: "podcast"
+cardTitulo: "Malacara: a marca de calçados que nasceu na crise e vende direto"
+cardTexto: "Francis, da Malacara, sobre criar uma marca em plena crise de 2008, usar o e-commerce como primeiro canal e transformar a venda direta na maior vantagem."
 ---
 
 A Malacara é um caso raro: uma fábrica de calçado que já nasceu vendendo direto ao consumidor final, num momento em que o setor inteiro fechava as portas. Francis, um dos sócios, conta como a marca surgiu em plena crise de 2008, por que o e-commerce foi a primeira ferramenta de venda e como essa estrutura, quase por acaso, virou a maior vantagem competitiva da empresa.

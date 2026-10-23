@@ -23,6 +23,8 @@ faq:
     a: "Muito dificilmente. O ciclo financeiro do e-commerce consome caixa proporcionalmente ao crescimento, e crescer rápido sem capital é a causa mais comum de quebra em loja lucrativa."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "ecommerce"
+cardTexto: "O que quebra em cada faixa de faturamento, margem, operação e caixa, e o que precisa ser construído antes de cada salto."
 ---
 
 O caminho de R$100 mil a R$1 milhão por mês não é uma linha reta com mais verba. É uma sequência de reconstruções: o que sustenta a loja em R$100 mil não sustenta em R$300 mil, e o que funciona em R$300 mil não chega aos R$800 mil. Este guia mostra o que quebra em cada faixa, o que precisa ser construído antes de cada salto e por que a ordem importa mais que a velocidade.

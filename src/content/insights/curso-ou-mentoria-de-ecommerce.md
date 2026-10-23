@@ -23,6 +23,8 @@ faq:
     a: "Sim, e muitas vezes é o ideal. O curso dá a base e o vocabulário; a mentoria adapta esse conhecimento ao seu contexto e cobra a execução. O curso ensina o mapa, a mentoria ajuda a dirigir com o seu carro, na sua estrada."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "mentoria"
+cardSelo: "Mentoria · Guia"
 ---
 
 A dúvida entre **curso ou mentoria de e-commerce** quase sempre chega no mesmo momento: a loja parou de crescer no ritmo de antes, você sente que está tomando decisões no escuro e decide investir em si mesmo. O problema é que curso e mentoria resolvem coisas diferentes, e escolher pelo preço, sem olhar o seu estágio, é a forma mais rápida de gastar dinheiro no lugar errado. Este guia mostra qual dos dois faz sentido em cada faixa de faturamento, a partir de quando a mentoria individual se paga e quando a resposta honesta é: nenhum dos dois ainda.

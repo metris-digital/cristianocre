@@ -23,6 +23,8 @@ faq:
     a: "Peça uma conversa de diagnóstico antes. Uma hora com alguém experiente já mostra se a pessoa entende o seu tipo de operação, se fala de margem ou só de ROAS, e se ela diz com clareza para quem o trabalho dela não serve."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "mentoria"
+cardTexto: "Quatro condições decidem se o investimento se paga, e cinco situações em que a resposta honesta é não contratar agora."
 ---
 
 Toda página de mentoria responde que sim. Esta responde depende, e explica de quê. Depois de conduzir dezenas de diagnósticos com donos de loja, ficou claro que o retorno de uma mentoria não é decidido pelo mentor nem pelo preço. Ele é decidido por quatro condições da operação de quem contrata. Quando as quatro estão presentes, o retorno é quase previsível. Quando falta uma, o investimento se perde sem que ninguém tenha feito nada errado.

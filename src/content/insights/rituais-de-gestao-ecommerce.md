@@ -27,6 +27,8 @@ faq:
 chamada:
   titulo: "Monte a agenda de gestão da sua operação"
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde a informação está travando e qual rotina resolveria isso."
+categoria: "ecommerce"
+cardTexto: "Quatro reuniões com hora marcada, pauta fixa e decisão registrada. Custam quatro horas por semana e substituem o olho do dono."
 ---
 
 Quase toda operação que trava entre cem mil e um milhão por mês trava pelo mesmo motivo, e não é falta de verba nem falta de talento. É que as decisões passaram a depender de informação que está espalhada, e ninguém tem hora marcada para juntar essa informação. O time trabalha muito, o dono responde mensagem o dia inteiro, e as decisões importantes acontecem tarde. Ritual de gestão resolve isso e custa quatro horas por semana.

@@ -73,7 +73,7 @@ const scriptPixel = `
 <meta property="og:image" content={imagem}>
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="675">
-<meta property="og:image:alt" content={imagemAlt}>
+{imagemAlt && <meta property="og:image:alt" content={imagemAlt}>}
 </>}
 {publicado && <>
 <meta property="article:published_time" content={publicado}>

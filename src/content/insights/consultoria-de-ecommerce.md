@@ -68,6 +68,8 @@ guia:
       url: "/consultoria-de-marketing-para-ecommerce"
 chamada:
   link: "https://metris.digital/form/"
+categoria: "ecommerce"
+cardTexto: "Como um diagnóstico estratégico identifica os gargalos da loja e destrava o crescimento antes de você gastar mais."
 ---
 
 Tem loja que fatura bem e não sobra nada. Tem loja que investe em anúncio e não sai do lugar. Tem loja com produto excelente e tráfego morno. Na maioria desses casos, o dono já tentou de tudo, menos parar e diagnosticar onde, exatamente, o dinheiro está vazando. É essa a função de uma consultoria de e-commerce. Este guia explica o que é, o que ela entrega, quando faz mais sentido do que uma agência e como escolher um bom consultor.

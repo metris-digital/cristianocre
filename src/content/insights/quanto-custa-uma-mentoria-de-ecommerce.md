@@ -23,6 +23,8 @@ faq:
     a: "Prazo e forma de pagamento costumam ser negociáveis. Escopo também: reduzir frequência de encontros baixa o valor. Negociar o preço mantendo o mesmo escopo raramente funciona com mentor sênior, porque o limite dele é agenda, não margem."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "mentoria"
+cardTexto: "As faixas praticadas por formato, os seis fatores que fazem o preço variar e a conta de margem que diz se o investimento cabe na sua operação."
 ---
 
 Essa é a pergunta mais buscada sobre o tema e a que menos gente responde de frente. A maioria das páginas de mentoria pede que você preencha um formulário para descobrir o valor, o que é ruim para quem está pesquisando e ruim para quem vende, porque atrai gente fora do orçamento. Aqui vai a resposta direta: as faixas praticadas no mercado brasileiro, os seis fatores que fazem o preço variar e a conta que diz se aquele número cabe na sua operação.

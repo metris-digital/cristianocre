@@ -27,6 +27,8 @@ faq:
 chamada:
   titulo: "Descubra quais réguas fazem mais diferença na sua loja"
   texto: "Receba uma análise gratuita do seu e-commerce e saia com a ordem certa de implementação para a sua operação."
+categoria: "ecommerce"
+cardTexto: "Cada uma com gatilho, timing, canal e o que resolve. Comece pelas cinco primeiras."
 ---
 
 Quando eu abro a conta de CRM de uma loja em diagnóstico, o cenário quase sempre é o mesmo: existe uma automação de carrinho abandonado, existe um disparo de boas-vindas que ninguém revisa há um ano, e existe uma newsletter semanal que virou obrigação. O resto do relacionamento é manual ou não existe. Enquanto isso, a mesma operação gasta com mídia para reconquistar gente que já comprou.

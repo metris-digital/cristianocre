@@ -37,6 +37,8 @@ chamada:
   botao: "Conhecer o curso"
   link: "/curso-marketing-para-ecommerce"
   nota: "Certificado de conclusão e garantia de 7 dias."
+categoria: "trafego"
+cardTexto: "Quando ligar, como aquecer público antes de novembro e por que campanha nova no dia 27 sai cara."
 ---
 
 Campanha de Meta Ads precisa de dois tempos: o tempo do algoritmo, que é aprender quem converte, e o tempo do público, que é conhecer a marca a ponto de comprar. Nenhum dos dois cabe em uma semana. Quem entende isso monta a operação de novembro começando em outubro, e chega no dia 27 escalando o que já funciona em vez de descobrindo o que funciona.

@@ -27,6 +27,8 @@ faq:
 chamada:
   titulo: "Descubra o gargalo antes de abrir a vaga"
   texto: "Receba uma análise gratuita do seu e-commerce e saiba qual perfil realmente resolve o que está travando na sua operação."
+categoria: "ecommerce"
+cardTexto: "Generalista ou especialista, como avaliar sem ser da área e o que cobrar nos primeiros 90 dias."
 ---
 
 A cena se repete: a loja cresceu, o dono não dá mais conta de cuidar de marketing junto com tudo o resto, e a decisão vira uma vaga. Três meses depois a pessoa está no time, trabalhando bastante, e o resultado não mudou. Quase sempre o problema não foi a pessoa. Foi que ninguém definiu antes qual problema aquela contratação deveria resolver.

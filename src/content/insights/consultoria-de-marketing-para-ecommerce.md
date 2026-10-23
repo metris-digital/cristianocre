@@ -34,6 +34,10 @@ chamada:
   titulo: "Descubra o gargalo real antes de contratar qualquer coisa"
   texto: "Uma hora de análise gratuita comigo. A gente olha a sua operação, nomeia onde está travando e define as prioridades dos próximos 90 dias. Sem compromisso."
 feedYoutube: true
+categoria: "servicos"
+cardSelo: "Consultoria · Escopo"
+cardTitulo: "Consultoria de marketing para e-commerce"
+cardTexto: "Quando o problema é mesmo marketing e quando ele apanha por um gargalo de operação."
 ---
 
 Consultoria de marketing para e-commerce tem um escopo claro: aquisição, canais, funil, mensagem. E tem um limite igualmente claro: ela não conserta o que não é marketing. Boa parte da frustração com consultoria de marketing vem de contratar o escopo certo para o problema errado. Vou te ajudar a separar.

@@ -23,6 +23,9 @@ faq:
     a: "Consultoria ou um diagnóstico. Contratar execução sem saber o gargalo costuma resultar em muita atividade e pouca mudança de resultado."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "mentoria"
+cardSelo: "Mentoria · Guia"
+cardTexto: "Quatro modelos, o mesmo discurso e preços parecidos. Entenda quem decide, quem executa e qual faz sentido para o momento da sua loja."
 ---
 
 Contratar o modelo errado é caro de duas formas: pelo dinheiro gasto e pelos meses perdidos resolvendo a coisa errada. Quem precisa de direção e contrata execução recebe muita atividade e nenhum norte. Quem precisa de braço e contrata orientação fica com um plano excelente e ninguém para rodá-lo. Este guia separa os quatro modelos por três critérios objetivos e mostra qual serve a cada momento.

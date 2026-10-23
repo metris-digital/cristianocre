@@ -32,6 +32,9 @@ chamada:
   titulo: "Descubra o gargalo real da sua operação"
   texto: "Uma hora de análise gratuita comigo. A gente olha a sua loja, nomeia onde está travando e define as prioridades dos próximos 90 dias."
 feedYoutube: true
+categoria: "ecommerce"
+cardTitulo: "Carrinho abandonado: como recuperar a venda"
+cardTexto: "Por que abandonam, a diferença entre carrinho e checkout e como recuperar, inclusive o PIX gerado e não pago."
 ---
 
 Carrinho abandonado não é fracasso, é a venda mais barata que você tem para recuperar: a pessoa já demonstrou intenção, você só não fechou. As pesquisas de referência do setor, como as do Baymard Institute, mostram que a maioria dos carrinhos é abandonada. A boa notícia é que uma parte disso volta com pouco esforço, se você souber onde está perdendo.

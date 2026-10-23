@@ -37,6 +37,8 @@ chamada:
   botao: "Ver materiais gratuitos"
   link: "/materiais"
   nota: "Basta informar o seu melhor e-mail."
+categoria: "ecommerce"
+cardTexto: "Como segmentar, quando começar a aquecer e que sequência usar no único canal que não fica mais caro em novembro."
 ---
 
 Toda Black Friday tem duas lojas competindo com estruturas de custo completamente diferentes. Uma precisa comprar cada visita no leilão mais caro do ano. A outra fala com uma base que já a conhece, por um custo que não muda porque o mercado ficou disputado. A diferença entre as duas não se constrói em novembro, se constrói nos meses anteriores, e é a vantagem mais subestimada da data.

@@ -23,6 +23,8 @@ faq:
     a: "Uma boa costuma bastar. Se depois de uma hora você não sabe dizer qual é o seu gargalo principal na visão dele, provavelmente a conversa foi apresentação de oferta, não diagnóstico."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "mentoria"
+cardTexto: "Sete critérios objetivos, as perguntas que revelam quem opera de verdade e os sinais de alerta que aparecem antes de você assinar."
 ---
 
 O custo de escolher o mentor errado não é o valor do contrato. É o trimestre que você passa executando a prioridade errada, com a convicção de quem está sendo orientado. Por isso a escolha merece critério, e não simpatia. Os sete critérios abaixo são objetivos, dá para verificar cada um antes de assinar, e a maioria aparece em uma única conversa bem conduzida.

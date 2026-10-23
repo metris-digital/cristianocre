@@ -23,6 +23,9 @@ faq:
     a: "Em geral, não. Quando existe um profissional sênior interno com autonomia e acesso aos números, o papel de direção já está ocupado."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "mentoria"
+cardSelo: "Mentoria · Guia"
+cardTexto: "O que cada uma resolve, quando somar as duas faz sentido e como evitar o conflito de comando. Mentoria não substitui agência, qualifica a direção."
 ---
 
 Agência e mentoria não competem: elas ocupam camadas diferentes do problema. A agência responde pelo *como*, como rodar a campanha, como estruturar o criativo, como configurar a conta. A mentoria responde pelo *o quê* e pelo *porquê*, qual objetivo perseguir, qual margem defender, o que priorizar neste trimestre. Este guia mostra quando somar as duas faz sentido, quando é desperdício e como evitar o conflito de comando.

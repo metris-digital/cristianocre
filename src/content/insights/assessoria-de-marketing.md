@@ -23,6 +23,8 @@ faq:
     a: "Depende do tamanho da operação. Time interno entrega dedicação total, mas custa caro. A assessoria entrega experiência sênior por uma fração do custo, sem vínculo. Para a maioria das PMEs, entrega mais capacidade por real investido."
 chamada:
   link: "https://metris.digital/form/"
+categoria: "servicos"
+cardTexto: "O modelo que une estratégia sênior e execução contínua, com foco em margem, e como saber se a sua empresa precisa de um."
 ---
 
 A maioria das empresas não tem um problema de marketing. Tem um problema de quem cuida do marketing. O dono acumula a função, contrata um freelancer para apagar incêndio, troca de agência a cada seis meses e segue sem previsibilidade. O resultado aparece em ondas, nunca em sistema. A assessoria de marketing nasce para resolver exatamente isso, mas o termo virou guarda-chuva. Este guia coloca ordem na casa: o que é, o que faz na prática, quanto custa e como saber se a sua empresa precisa de uma.

@@ -29,6 +29,9 @@ chamada:
   numeroLegenda: "análise gratuita da sua operação"
   botao: "Fazer meu diagnóstico"
   nota: "Gratuito e sem compromisso."
+categoria: "ecommerce"
+cardSelo: "Método · Guia"
+cardTexto: "IA não decide o que você vende nem a que preço. O método para achar o que vale automatizar: medir a tarefa antes."
 ---
 
 Eu montei um desafio interno na minha operação com uma meta: recuperar mil horas de trabalho ao longo de um ano usando IA e automação. A parte interessante não foi escolher as ferramentas. Foi descobrir que, antes de automatizar qualquer coisa, a gente não sabia dizer quanto tempo custava cada tarefa. E sem isso não dá para escolher o que atacar primeiro.

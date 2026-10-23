@@ -26,6 +26,8 @@ chamada:
   titulo: "Pare de apostar. Comece a investir com previsibilidade."
   texto: "Receba uma análise gratuita das suas campanhas e descubra onde está sendo desperdiçado orçamento."
   link: "https://metris.digital/form/"
+categoria: "trafego"
+cardTexto: "O guia completo para transformar investimento em anúncios em vendas previsíveis, e escolher o profissional certo para o seu negócio."
 ---
 
 Você já investiu em anúncios no Google ou no Instagram e teve a sensação de que o dinheiro simplesmente evaporou? Você não está sozinho. A diferença entre uma campanha que queima orçamento e uma que gera vendas previsíveis quase sempre tem um nome: o **gestor de tráfego**. Neste guia, você vai entender o que esse profissional faz, quanto custa, como ele se diferencia de outras funções de marketing e, o mais importante, como escolher o gestor de tráfego certo para o seu negócio.

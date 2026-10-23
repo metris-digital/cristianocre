@@ -32,6 +32,9 @@ chamada:
   titulo: "Descubra o gargalo real da sua operação"
   texto: "Uma hora de análise gratuita comigo. A gente olha a sua loja, nomeia onde está travando e define as prioridades dos próximos 90 dias."
 feedYoutube: true
+categoria: "trafego"
+cardTitulo: "Google Merchant Center: o feed que decide se você aparece"
+cardTexto: "Como estruturar o feed, os erros que reprovam seus produtos e por que isso ficou crítico na era dos agentes de compra."
 ---
 
 Boa parte das vendas do Google no e-commerce não passa por anúncio de texto, passa por produto: Shopping e Performance Max. E tudo isso é alimentado por um lugar que muita loja trata como detalhe técnico e deveria tratar como decisão de operação: o Google Merchant Center. Feed bem feito é venda; feed pobre é invisibilidade.

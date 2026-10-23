@@ -23,6 +23,7 @@ faq:
     a: "Nem sempre. Kits com desconto agressivo e parcelamento longo sobem o ticket, mas comprimem a margem. Só vale quando o ganho de receita por visita supera o custo da alavanca. Por isso ticket, conversão e margem precisam ser lidos juntos."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "ecommerce"
 ---
 
 Subir o ticket médio é, no papel, a forma mais barata de crescer: você usa o mesmo tráfego que já pagou para atrair e tira mais de cada pedido. O problema é que quase toda alavanca de ticket empurra o carrinho para cima e, no mesmo movimento, dá um leve empurrão na taxa de conversão para baixo. Ninguém escreve essa segunda parte. Este guia coloca as 7 alavancas para **aumentar o ticket médio do e-commerce** lado a lado com o risco que cada uma cria na conversão, e com a faixa de ganho que costumam entregar no mercado brasileiro.

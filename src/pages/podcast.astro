@@ -1,50 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<!-- Google tag (gtag.js) — GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDN80J4GWP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-BDN80J4GWP');
-</script>
-<!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '942431053282816');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=942431053282816&ev=PageView&noscript=1"/></noscript>
-<!-- End Meta Pixel Code -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="metris-icon.png">
-<title>Podcast Performance para Resultados | Cristiano Creczyenski</title>
-<meta name="description" content="O podcast de e-commerce e marketing de performance apresentado por Cristiano Creczyenski. Conversas com donos de operação sobre aquisição, margem, time e as decisões que fazem uma loja crescer.">
-<link rel="canonical" href="https://www.cristianocre.com/podcast">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Cristiano Creczyenski">
-<meta property="og:site_name" content="Cristiano Creczyenski">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.cristianocre.com/podcast">
-<meta property="og:title" content="Podcast Performance para Resultados | Cristiano Creczyenski">
-<meta property="og:description" content="O podcast de e-commerce e marketing de performance apresentado por Cristiano Creczyenski. Conversas com donos de operação sobre aquisição, margem, time e as decisões que fazem uma loja crescer.">
-<meta property="og:image" content="https://www.cristianocre.com/img/podcast-performance-para-resultados.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="675">
-<meta property="og:image:alt" content="Podcast Performance para Resultados, apresentado por Cristiano Creczyenski">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://www.cristianocre.com/img/podcast-performance-para-resultados.jpg">
-<script type="application/ld+json">
-{
+---
+// Página da série (/podcast). A lista "no site" sai dos episódios
+// publicados em src/content/podcast, do mais novo para o mais antigo.
+import Base from '../layouts/Base.astro';
+import Card from '../components/Card.astro';
+import { publicados, titulo } from '../lib/posts';
+import { SITE, dataPorExtenso } from '../lib/site';
+
+const episodios = await publicados('podcast');
+const itens = episodios.map((ep, i) => ({
+  '@type': 'ListItem',
+  position: i + 1,
+  url: `${SITE}/${ep.id}`,
+  name: titulo(ep),
+}));
+
+const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -116,45 +86,8 @@
       "mainEntity": {
         "@type": "ItemList",
         "name": "Episódios do Performance para Resultados publicados no site",
-        "numberOfItems": 6,
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "url": "https://www.cristianocre.com/podcast-senplo",
-            "name": "Senplo: do atacado ao digital com lançamento semanal"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "url": "https://www.cristianocre.com/podcast-fiber",
-            "name": "Fiber: de uma máscara na pandemia a uma marca de performance e saúde"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "url": "https://www.cristianocre.com/podcast-ibob",
-            "name": "iBob: como vender motor elétrico e automação industrial pela internet"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "url": "https://www.cristianocre.com/podcast-belmax",
-            "name": "Belmax: um grupo de 55 anos entra no digital sem perder a identidade"
-          },
-          {
-            "@type": "ListItem",
-            "position": 5,
-            "url": "https://www.cristianocre.com/podcast-malacara",
-            "name": "Malacara: a marca de calçados que nasceu na crise e vende direto"
-          },
-          {
-            "@type": "ListItem",
-            "position": 6,
-            "url": "https://www.cristianocre.com/podcast-cachorreiros",
-            "name": "Cachorreiros: uma marca pet D2C que nasceu de um problema de fornecedor"
-          }
-        ]
+        "numberOfItems": itens.length,
+        "itemListElement": itens
       }
     },
     {
@@ -250,46 +183,19 @@
       ]
     }
   ]
-}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://i.ytimg.com">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<a href="#main" class="skip">Pular para o conteúdo</a>
-
-<header class="nav" id="nav">
-  <div class="wrap nav-inner">
-    <a href="/" class="logo">Cristiano <span>Creczyenski</span></a>
-    <nav class="nav-links" aria-label="Principal">
-      <a href="/insights">Insights</a>
-      <a href="/treinamentos">Treinamentos</a>
-      <a href="/materiais">Materiais</a>
-      <a href="/diagnostico">Diagnóstico 360</a>
-      <a href="/mentoria">Mentoria</a>
-    </nav>
-    <div class="nav-right">
-      <a href="/diagnostico" class="btn btn-green btn-sm">Fazer meu diagnóstico <span class="ar">→</span></a>
-      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
-      </button>
-    </div>
-  </div>
-</header>
-
-<nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
-  <a href="/insights">Insights</a>
-  <a href="/treinamentos">Treinamentos</a>
-  <a href="/materiais">Materiais</a>
-  <a href="/diagnostico">Diagnóstico 360</a>
-  <a href="/mentoria">Mentoria</a>
-  <a href="/diagnostico" class="btn btn-green btn-block">Fazer meu diagnóstico 360 <span class="ar">→</span></a>
-</nav>
-
-<main id="main">
+};
+---
+<Base
+  titulo={"Podcast Performance para Resultados | Cristiano Creczyenski"}
+  descricao={"O podcast de e-commerce e marketing de performance apresentado por Cristiano Creczyenski. Conversas com donos de operação sobre aquisição, margem, time e as decisões que fazem uma loja crescer."}
+  ogTitulo={"Podcast Performance para Resultados | Cristiano Creczyenski"}
+  ogDescricao={"O podcast de e-commerce e marketing de performance apresentado por Cristiano Creczyenski. Conversas com donos de operação sobre aquisição, margem, time e as decisões que fazem uma loja crescer."}
+  imagem={"https://www.cristianocre.com/img/podcast-performance-para-resultados.jpg"}
+  imagemAlt={"Podcast Performance para Resultados, apresentado por Cristiano Creczyenski"}
+  canonico={"https://www.cristianocre.com/podcast"}
+  jsonLd={jsonLd}
+  feedYoutube
+>
 <section class="page-hero">
   <div class="wrap">
     <span class="pill"><span class="dot"></span>Podcast</span>
@@ -346,108 +252,7 @@
       <p>Quando um episódio rende um tema que dá para aplicar na semana seguinte, ele também vira texto aqui no site. Não é transcrição: é a minha leitura do que foi dito e o que eu levaria para a sua operação.</p>
     </div>
     <div class="ilist">
-      <a class="icard reveal" href="/podcast-senplo">
-        <span class="ithumb">
-          <picture>
-            <source srcset="/img/podcast-senplo.webp" type="image/webp">
-            <img src="/img/podcast-senplo.jpg" alt="Podcast Performance para Resultados com Daniel Bossle, cofundador da Senplo" width="1200" height="675" loading="lazy" decoding="async">
-          </picture>
-        </span>
-        <span class="ibody">
-          <span class="ichip">Podcast &middot; Episódio 007</span>
-          <h2>Senplo: do atacado ao digital com lançamento semanal</h2>
-          <p>Daniel Bossle, cofundador da Senplo, sobre trocar duas coleções por ano por um lançamento por semana, por que só um marketplace funcionou e o teste de página de produto que quase dobrou a conversão.</p>
-          <span class="imeta">
-            <span class="mt">2 de agosto de 2026</span>
-            <span class="igo">Ler o episódio <span class="ar">&#8594;</span></span>
-          </span>
-        </span>
-      </a>
-      <a class="icard reveal" href="/podcast-fiber">
-        <span class="ithumb">
-          <picture>
-            <source srcset="/img/podcast-fiber.webp" type="image/webp">
-            <img src="/img/podcast-fiber.jpg" alt="Podcast Performance para Resultados com Gustavo, CEO da Fiber" width="1200" height="675" loading="lazy" decoding="async">
-          </picture>
-        </span>
-        <span class="ibody">
-          <span class="ichip">Podcast &middot; Episódio 005</span>
-          <h2>Fiber: de uma máscara na pandemia a uma marca de performance e saúde</h2>
-          <p>Gustavo, CEO da Fiber, sobre fazer 20 anos de marca em 2, ter coragem de abandonar o produto que a tornou famosa e transformar performance com saúde no seu diferencial.</p>
-          <span class="imeta">
-            <span class="mt">18 de julho de 2026</span>
-            <span class="igo">Ler o episódio <span class="ar">&#8594;</span></span>
-          </span>
-        </span>
-      </a>
-      <a class="icard reveal" href="/podcast-ibob">
-        <span class="ithumb">
-          <picture>
-            <source srcset="/img/podcast-ibob.webp" type="image/webp">
-            <img src="/img/podcast-ibob.jpg" alt="Podcast Performance para Resultados com Myron Bercker, da iBob" width="1200" height="675" loading="lazy" decoding="async">
-          </picture>
-        </span>
-        <span class="ibody">
-          <span class="ichip">Podcast &middot; Episódio 004</span>
-          <h2>iBob: como vender motor elétrico e automação industrial pela internet</h2>
-          <p>Myron Bercker, da iBob, sobre traduzir o produto técnico para a busca do cliente, profissionalizar a logística desde o dia um e medir margem em vez de faturamento.</p>
-          <span class="imeta">
-            <span class="mt">11 de julho de 2026</span>
-            <span class="igo">Ler o episódio <span class="ar">&#8594;</span></span>
-          </span>
-        </span>
-      </a>
-      <a class="icard reveal" href="/podcast-belmax">
-        <span class="ithumb">
-          <picture>
-            <source srcset="/img/podcast-belmax.webp" type="image/webp">
-            <img src="/img/podcast-belmax.jpg" alt="Podcast Performance para Resultados com Otávio e Renata Sandrin, da Belmax" width="1200" height="675" loading="lazy" decoding="async">
-          </picture>
-        </span>
-        <span class="ibody">
-          <span class="ichip">Podcast &middot; Episódio 003</span>
-          <h2>Belmax: um grupo de 55 anos entra no digital sem perder a identidade</h2>
-          <p>Otávio e Renata Sandrin, da Belmax, sobre migrar uma indústria de móveis para o e-commerce, escutar o cliente como estratégia e dobrar o faturamento em um ano.</p>
-          <span class="imeta">
-            <span class="mt">4 de julho de 2026</span>
-            <span class="igo">Ler o episódio <span class="ar">&#8594;</span></span>
-          </span>
-        </span>
-      </a>
-      <a class="icard reveal" href="/podcast-malacara">
-        <span class="ithumb">
-          <picture>
-            <source srcset="/img/podcast-malacara.webp" type="image/webp">
-            <img src="/img/podcast-malacara.jpg" alt="Podcast Performance para Resultados com Francis, cofundador da Malacara" width="1200" height="675" loading="lazy" decoding="async">
-          </picture>
-        </span>
-        <span class="ibody">
-          <span class="ichip">Podcast &middot; Episódio 002</span>
-          <h2>Malacara: a marca de calçados que nasceu na crise e vende direto</h2>
-          <p>Francis, da Malacara, sobre criar uma marca em plena crise de 2008, usar o e-commerce como primeiro canal e transformar a venda direta ao consumidor na maior vantagem.</p>
-          <span class="imeta">
-            <span class="mt">27 de junho de 2026</span>
-            <span class="igo">Ler o episódio <span class="ar">&#8594;</span></span>
-          </span>
-        </span>
-      </a>
-      <a class="icard reveal" href="/podcast-cachorreiros">
-        <span class="ithumb">
-          <picture>
-            <source srcset="/img/podcast-cachorreiros.webp" type="image/webp">
-            <img src="/img/podcast-cachorreiros.jpg" alt="Podcast Performance para Resultados com Bernardo e Mari, da Cachorreiros" width="1200" height="675" loading="lazy" decoding="async">
-          </picture>
-        </span>
-        <span class="ibody">
-          <span class="ichip">Podcast &middot; Episódio 001</span>
-          <h2>Cachorreiros: uma marca pet D2C que nasceu de um problema de fornecedor</h2>
-          <p>Bernardo e Mari, da Cachorreiros, sobre criar uma marca pet do zero, por que abrir frentes demais quase custou o foco e o que sustentou o crescimento no online.</p>
-          <span class="imeta">
-            <span class="mt">20 de junho de 2026</span>
-            <span class="igo">Ler o episódio <span class="ar">&#8594;</span></span>
-          </span>
-        </span>
-      </a>
+{episodios.map((ep) => <Card post={ep} data={dataPorExtenso(ep.data.pubDate)} comCategoria={false} />)}
     </div>
   </div>
 </section>
@@ -529,42 +334,4 @@
     </div>
   </div>
 </section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <a href="/" class="logo">Cristiano <span>Creczyenski</span></a>
-        <p>Metris. Performance e resultados em marketing e e‑commerce para empreendedores que querem crescer.</p>
-        <a class="dev-by" href="https://metris.digital/?utm_source=cristianocre&utm_medium=site" target="_blank" rel="noopener"><img src="metris-icon.png" alt="Metris" width="22" height="22"><span>Desenvolvido por <b>Metris</b></span></a>
-      </div>
-      <div class="foot-col">
-        <h4>Navegação</h4>
-        <a href="/">Home</a>
-        <a href="/insights">Insights</a>
-        <a href="/podcast">Podcast</a>
-        <a href="/cases">Cases</a>
-        <a href="/materiais">Materiais</a>
-        <a href="/treinamentos">Treinamentos</a>
-        <a href="/diagnostico">Diagnóstico 360</a>
-        <a href="/mentoria">Mentoria</a>
-      </div>
-      <div class="foot-col">
-        <h4>Social</h4>
-        <a href="https://instagram.com/cristianocre" target="_blank" rel="noopener">Instagram ↗</a>
-        <a href="https://www.youtube.com/@cristianocre" target="_blank" rel="noopener">YouTube ↗</a>
-        <a href="https://br.linkedin.com/in/cristianocre" target="_blank" rel="noopener">LinkedIn ↗</a>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 Metris. Todos os direitos reservados.</span>
-      <div class="links"><a href="/termos">Termos</a><a href="/privacidade">Privacidade</a></div>
-    </div>
-  </div>
-</footer>
-
-<script src="app.js"></script>
-<script src="youtube-feed.js" defer></script>
-</body>
-</html>
+</Base>

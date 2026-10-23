@@ -23,6 +23,8 @@ faq:
     a: "Ajustes de margem e precificação levam de 30 a 60 dias. Estrutura de operação e time costuma levar de um a dois trimestres."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "ecommerce"
+cardTexto: "15 pontos objetivos em 5 blocos, margem, aquisição, operação, time e caixa, com pontuação e leitura do resultado antes de aumentar a verba."
 ---
 
 Este checklist cobre os cinco blocos que determinam se uma operação suporta crescimento: margem, aquisição, operação, time e caixa. São 15 pontos objetivos, com resposta sim ou não. Responda com honestidade, o custo de superestimar a própria estrutura aparece três meses depois, no caixa.

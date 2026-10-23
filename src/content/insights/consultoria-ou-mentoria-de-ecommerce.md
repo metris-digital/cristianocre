@@ -34,6 +34,10 @@ chamada:
   titulo: "Descubra o gargalo real antes de contratar qualquer coisa"
   texto: "Uma hora de análise gratuita comigo. A gente olha a sua operação, nomeia onde está travando e define as prioridades dos próximos 90 dias. Sem compromisso."
 feedYoutube: true
+categoria: "servicos"
+cardSelo: "Consultoria · Comparativo"
+cardTitulo: "Consultoria ou mentoria de e-commerce?"
+cardTexto: "Uma resolve um problema, a outra desenvolve você. Qual serve para o seu momento."
 ---
 
 Consultoria e mentoria são confundidas o tempo todo, e a escolha errada faz você pagar por uma coisa esperando outra. A diferença é simples quando você olha para o que cada uma resolve: uma é sobre um problema, a outra é sobre você.

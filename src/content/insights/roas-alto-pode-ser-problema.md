@@ -29,6 +29,8 @@ chamada:
   numeroLegenda: "análise gratuita da sua operação"
   botao: "Fazer meu diagnóstico"
   nota: "Gratuito e sem compromisso."
+categoria: "trafego"
+cardTexto: "ROAS muito alto costuma significar investimento baixo, venda baixa e custo fixo mal diluído. E markup nunca foi margem."
 ---
 
 Essa é a conversa que eu nunca vi acontecer em curso de tráfego, e que eu tive que aprender em gestão: o ROAS é um indicador de mídia sendo usado como indicador de negócio. Quando você entende o que ele esconde, a decisão de quanto investir muda completamente.

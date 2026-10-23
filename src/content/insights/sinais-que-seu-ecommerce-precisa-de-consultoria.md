@@ -34,6 +34,9 @@ chamada:
   titulo: "Descubra o gargalo real antes de contratar qualquer coisa"
   texto: "Uma hora de análise gratuita comigo. A gente olha a sua operação, nomeia onde está travando e define as prioridades dos próximos 90 dias. Sem compromisso."
 feedYoutube: true
+categoria: "servicos"
+cardSelo: "Consultoria · Sinais"
+cardTexto: "Os sintomas que denunciam operação no achismo e o gargalo por trás de cada um."
 ---
 
 Consultoria não é para todo mundo nem para todo momento. Mas existem sinais claros de que a operação chegou num ponto em que uma cabeça de fora, olhando o todo, muda o jogo. Se você marca três ou mais destes, vale conversar.

@@ -23,6 +23,8 @@ faq:
     a: "Sim. Sem uma linha de base registrada antes do primeiro encontro, qualquer resultado vira opinião. Anote margem, ROAS/CAC, ticket e a data de início. É esse antes que transforma o depois em número defensável."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "mentoria"
+cardSelo: "Mentoria · Guia"
 ---
 
 Medir o ROI de uma mentoria de e-commerce não é difícil por falta de fórmula, a conta é a mesma de qualquer investimento. É difícil porque quase ninguém registra o ponto de partida. Você entra na mentoria, aplica mudanças, o mês vira, o faturamento oscila por dez motivos ao mesmo tempo, e no fim não dá para dizer o que foi mérito da mentoria e o que foi sazonalidade. Este guia mostra o caminho oposto: como definir a linha de base **antes** de começar, quais quatro métricas acompanhar (margem, ROAS/CAC, ticket e tempo até resultado) e como aplicar a fórmula do ROI para transformar a decisão de contratar, ou continuar, em um número que você consegue defender.

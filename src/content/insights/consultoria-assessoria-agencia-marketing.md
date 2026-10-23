@@ -23,6 +23,8 @@ faq:
     a: "A Metris atua como assessoria de marketing de performance: une estratégia, execução e dados de forma contínua para transformar o marketing do cliente em um sistema previsível de atração e vendas."
 chamada:
   link: "https://metris.digital/form/?utm_source=cristianocre&utm_medium=blog&utm_campaign=consultoria-assessoria-agencia"
+categoria: "servicos"
+cardTexto: "Os três modelos prometem cuidar do seu marketing, mas entregam coisas diferentes. Entenda o papel de cada um e qual faz sentido para o seu momento."
 ---
 
 Na hora de profissionalizar o marketing, quase todo empreendedor esbarra na mesma dúvida: contratar uma **consultoria**, uma **assessoria** ou uma **agência de marketing**? Os nomes parecem sinônimos, e muita gente usa um pelo outro, mas cada modelo resolve um problema diferente, exige um envolvimento diferente do seu time e custa de forma diferente. Escolher errado significa pagar por algo que não era o que você precisava. Neste guia, você vai entender exatamente o que cada um faz e qual contratar para o seu momento.

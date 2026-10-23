@@ -41,6 +41,9 @@ chamada:
   titulo: "O que esse episódio ensina serve para a sua operação?"
   texto: "Em uma hora de análise gratuita comigo, a gente olha a sua loja do mesmo jeito que eu olho a dos convidados: onde está o gargalo real e o que muda o resultado nos próximos 90 dias."
 feedYoutube: true
+categoria: "podcast"
+cardTitulo: "Belmax: um grupo de 55 anos entra no digital sem perder a identidade"
+cardTexto: "Otávio e Renata Sandrin, da Belmax, sobre migrar uma indústria de móveis para o e-commerce, escutar o cliente como estratégia e dobrar o faturamento em um ano."
 ---
 
 A Belmax é a marca de móveis do Grupo Sandrin, um grupo com 55 anos de história em Bento Gonçalves. E o episódio conta o que talvez seja o desafio mais difícil de uma empresa longeva: mudar de canal, do varejo físico para o digital, sem perder a cultura que sustenta o negócio há décadas. Otávio e Renata contam como fizeram, o que quase deu errado e o que fez o faturamento dobrar em um ano.

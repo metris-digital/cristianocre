@@ -1,0 +1,257 @@
+---
+// Lista do blog (/insights). Os cards saem dos posts e episódios publicados,
+// do mais novo para o mais antigo. Os episódios ficam juntos, num bloco
+// aberto pelo card da série, na posição do episódio mais recente.
+import Base from '../layouts/Base.astro';
+import Card from '../components/Card.astro';
+import { publicados, titulo } from '../lib/posts';
+import { SITE } from '../lib/site';
+
+const MESES = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+const dataCurta = (d: Date) => `${d.getUTCDate()} ${MESES[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+
+const posts = await publicados('insights');
+const episodios = await publicados('podcast');
+type Bloco = { data: Date; post?: (typeof posts)[number] };
+const blocos: Bloco[] = [
+  ...posts.map((post) => ({ data: post.data.pubDate, post })),
+  ...(episodios.length ? [{ data: episodios[0].data.pubDate }] : []),
+// No empate de data, o bloco do podcast vem antes.
+].sort((a, b) => b.data.getTime() - a.data.getTime() || Number(!!a.post) - Number(!!b.post));
+
+const itens = [...posts, ...episodios].map((post, i) => ({
+  '@type': 'ListItem',
+  position: i + 1,
+  url: `${SITE}/${post.id}`,
+  name: titulo(post),
+}));
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "Insights",
+      "headline": "Artigos e guias para crescer com previsibilidade",
+      "description": "Artigos e guias sobre e-commerce, tráfego pago, mentoria e marketing de performance.",
+      "url": "https://www.cristianocre.com/insights",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Cristiano Creczyenski",
+        "url": "https://www.cristianocre.com"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Cristiano Creczyenski",
+        "url": "https://www.cristianocre.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Metris",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.cristianocre.com/metris-icon.png"
+        }
+      }
+    },
+    {
+      "@type": "ItemList",
+      "name": "Artigos e guias",
+      "numberOfItems": itens.length,
+      "itemListElement": itens
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.cristianocre.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://www.cristianocre.com/insights"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que são os Insights?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "É o espaço de artigos e guias sobre e-commerce, tráfego pago, margem, retenção e gestão. Todo conteúdo é escrito pelo Cristiano Creczyenski a partir do que ele aplica na operação real da Metris e nos diagnósticos que conduz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Com que frequência sai conteúdo novo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O ritmo é de publicação contínua, organizada em clusters temáticos. Em vez de um post solto por semana, os conteúdos saem em conjuntos que cobrem um tema inteiro, como o cluster de Black Friday e o de mentoria de e-commerce."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais temas o blog cobre?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Método e estratégia, canais e execução, análise e resultado, e visão de operação. Na prática: tráfego pago, margem e precificação, conversão e site, retenção e base própria, time e gestão, além de comparativos como agência contra time interno."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Onde ficam os episódios do podcast?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Na categoria Podcast, aqui mesmo nesta página, e na página da série, em /podcast, que mostra sempre os episódios mais recentes direto do canal. O podcast Performance para Resultados fica no canal @PerformanceParaResultados e no Spotify, e é separado do canal de aulas @cristianocre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Para quem é esse conteúdo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para o dono do resultado de um e-commerce, ou seja, quem responde pelo lucro da operação. Não é conteúdo para prestador de serviço aprender a vender tráfego, é conteúdo para quem precisa decidir onde colocar verba, o que cortar e o que priorizar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Os números citados nos artigos são reais?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, e é uma regra do projeto. Dado de operação só entra quando existe origem real, seja da operação da Metris, de um caso de cliente ou de fonte pública citável. Quando o dado não existe, o texto trabalha com princípio e critério em vez de inventar número."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+<Base
+  titulo={"Insights: artigos e guias de e-commerce, tráfego e gestão"}
+  descricao={"Artigos e guias para crescer com previsibilidade: e-commerce, tráfego pago, mentoria e marketing de performance. Conteúdo prático de quem opera todo dia."}
+  ogTitulo={"Insights: artigos e guias para crescer com previsibilidade"}
+  ogDescricao={"Artigos e guias para crescer com previsibilidade: e-commerce, tráfego pago, mentoria e marketing de performance."}
+  imagem={"https://www.cristianocre.com/img/erros-ao-escalar-ecommerce.jpg"}
+  canonico={"https://www.cristianocre.com/insights"}
+  jsonLd={jsonLd}
+>
+<section class="page-hero">
+  <div class="wrap">
+    <span class="pill"><span class="dot"></span>Insights</span>
+    <h1>Artigos e guias para crescer com <span class="accent">previsibilidade</span></h1>
+    <p class="sub">Conteúdo para quem quer levar seu negócio para o próximo nível em gestão, marketing de performance, tráfego pago e e-commerce.</p>
+  </div>
+</section>
+
+<section class="section" id="insights" style="padding-top:40px">
+  <div class="wrap">
+    <div class="ifilter reveal" role="group" aria-label="Filtrar por categoria">
+      <button class="ifb active" data-filter="all">Todos <span class="cnt">86</span></button>
+      <button class="ifb" data-filter="ecommerce">E-commerce <span class="cnt">34</span></button>
+      <button class="ifb" data-filter="trafego">Tráfego pago <span class="cnt">18</span></button>
+      <button class="ifb" data-filter="mentoria">Mentoria <span class="cnt">13</span></button>
+      <button class="ifb" data-filter="servicos">Marketing <span class="cnt">14</span></button>
+      <button class="ifb" data-filter="podcast">Podcast <span class="cnt">7</span></button>
+    </div>
+    <div class="ilist">
+{blocos.map((b) =>
+  b.post
+    ? <Card post={b.post} data={dataCurta(b.data)} />
+    : <>
+      <a class="icard reveal" data-cat="podcast" href="/podcast">
+        <span class="ithumb">
+          <picture>
+            <source srcset="/img/podcast-performance-para-resultados.webp" type="image/webp">
+            <img src="/img/podcast-performance-para-resultados.jpg" alt="Podcast Performance para Resultados, apresentado por Cristiano Creczyenski" width="1200" height="675" loading="lazy" decoding="async">
+          </picture>
+        </span>
+        <span class="ibody">
+          <span class="ichip">Podcast &middot; A série</span>
+          <h2>Performance para Resultados: o podcast</h2>
+          <p>Conversas com quem opera de verdade sobre aquisição, margem, time e as decisões que fazem uma marca crescer. Todos os episódios, no YouTube e no Spotify.</p>
+          <span class="imeta">
+            <span class="mt">Episódio novo por semana</span>
+            <span class="igo">Ouvir <span class="ar">&#8594;</span></span>
+          </span>
+        </span>
+      </a>
+      {episodios.map((ep) => <Card post={ep} data={dataCurta(ep.data.pubDate)} />)}
+      </>
+)}
+    </div>
+    <p class="iempty" id="iEmpty" hidden>Nenhum artigo nesta categoria por enquanto.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="pill"><span class="dot"></span>Perguntas frequentes</span>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq reveal" style="max-width:760px;margin:0 auto">
+      <details><summary>O que são os Insights?<span class="pm"></span></summary><div class="ans">É o espaço de artigos e guias sobre e-commerce, tráfego pago, margem, retenção e gestão. Todo conteúdo é escrito pelo Cristiano Creczyenski a partir do que ele aplica na operação real da Metris e nos diagnósticos que conduz.</div></details>
+      <details><summary>Com que frequência sai conteúdo novo?<span class="pm"></span></summary><div class="ans">O ritmo é de publicação contínua, organizada em clusters temáticos. Em vez de um post solto por semana, os conteúdos saem em conjuntos que cobrem um tema inteiro, como o cluster de Black Friday e o de mentoria de e-commerce.</div></details>
+      <details><summary>Quais temas o blog cobre?<span class="pm"></span></summary><div class="ans">Método e estratégia, canais e execução, análise e resultado, e visão de operação. Na prática: tráfego pago, margem e precificação, conversão e site, retenção e base própria, time e gestão, além de comparativos como agência contra time interno.</div></details>
+      <details><summary>Onde ficam os episódios do podcast?<span class="pm"></span></summary><div class="ans">Na categoria Podcast, aqui mesmo nesta página, e na página da série, em /podcast, que mostra sempre os episódios mais recentes direto do canal. O podcast Performance para Resultados fica no canal @PerformanceParaResultados e no Spotify, e é separado do canal de aulas @cristianocre.</div></details>
+      <details><summary>Para quem é esse conteúdo?<span class="pm"></span></summary><div class="ans">Para o dono do resultado de um e-commerce, ou seja, quem responde pelo lucro da operação. Não é conteúdo para prestador de serviço aprender a vender tráfego, é conteúdo para quem precisa decidir onde colocar verba, o que cortar e o que priorizar.</div></details>
+      <details><summary>Os números citados nos artigos são reais?<span class="pm"></span></summary><div class="ans">Sim, e é uma regra do projeto. Dado de operação só entra quando existe origem real, seja da operação da Metris, de um caso de cliente ou de fonte pública citável. Quando o dado não existe, o texto trabalha com princípio e critério em vez de inventar número.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="diag reveal">
+      <div class="diag-grid">
+        <div>
+          <span class="pill"><span class="dot"></span>Diagnóstico gratuito</span>
+          <h2>Pare de fazer marketing no improviso.</h2>
+          <p>Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento.</p>
+        </div>
+        <aside class="diag-side">
+          <div class="big">1h</div>
+          <div class="cap">análise com o Cristiano</div>
+          <a href="/diagnostico" class="btn btn-green btn-block">Quero meu diagnóstico <span class="ar">&#8594;</span></a>
+          <p class="micro">É gratuito e sem compromisso.</p>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+(function(){
+  var btns=document.querySelectorAll('.ifb'), cards=document.querySelectorAll('.icard'), empty=document.getElementById('iEmpty');
+  btns.forEach(function(b){
+    var f=b.dataset.filter, c=b.querySelector('.cnt');
+    if(!c) return;
+    c.textContent = f==='all' ? cards.length
+      : document.querySelectorAll('.icard[data-cat="'+f+'"]').length;
+  });
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      var f=b.dataset.filter, shown=0;
+      btns.forEach(function(x){ x.classList.toggle('active', x===b); });
+      cards.forEach(function(c){
+        var ok = (f==='all' || c.dataset.cat===f);
+        c.classList.toggle('is-hidden', !ok);
+        if(ok) shown++;
+      });
+      if(empty) empty.hidden = shown>0;
+      if(history.replaceState) history.replaceState(null,'', f==='all' ? location.pathname : location.pathname+'#'+f);
+    });
+  });
+  var h=(location.hash||'').replace('#','');
+  if(h){ var t=document.querySelector('.ifb[data-filter="'+h+'"]'); if(t) t.click(); }
+})();
+</script>
+</Base>

@@ -23,6 +23,9 @@ faq:
     a: "Quase sempre por olhar o ROAS da plataforma em vez do real, CAC maior que a margem, página que converte mal ou frete que encarece o checkout. O problema raramente está só no anúncio."
 chamada:
   link: "https://metris.digital/form/?utm_source=cristianocre&utm_medium=blog&utm_campaign=trafego-pago-ecommerce"
+categoria: "trafego"
+cardSelo: "Tráfego pago · Guia"
+cardTexto: "Canais, métricas, quanto investir e como estruturar campanhas que geram margem, não só pedido. Direto e sem fórmula mágica."
 ---
 
 Todo dono de loja virtual já viveu isso: você coloca dinheiro em anúncio, aparecem algumas vendas, mas no fim do mês a conta não fecha. O faturamento subiu e o lucro não. A pergunta que fica é simples e incômoda: o tráfego pago está vendendo ou só está queimando verba? Este guia responde isso. Você vai entender o que é tráfego pago para e-commerce, quais canais usar, quais métricas realmente importam, quanto investir e como estruturar campanhas que geram margem.

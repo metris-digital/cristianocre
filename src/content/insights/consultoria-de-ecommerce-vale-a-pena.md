@@ -34,6 +34,9 @@ chamada:
   titulo: "Descubra o gargalo real antes de contratar qualquer coisa"
   texto: "Uma hora de análise gratuita comigo. A gente olha a sua operação, nomeia onde está travando e define as prioridades dos próximos 90 dias. Sem compromisso."
 feedYoutube: true
+categoria: "servicos"
+cardSelo: "Consultoria · Decisão"
+cardTexto: "As quatro condições em que vale e as três situações em que é dinheiro jogado fora."
 ---
 
 "Vale a pena" é uma pergunta que só tem resposta honesta com "depende, e aqui está do quê depende". Consultoria de e-commerce entrega muito para algumas operações e é dinheiro jogado fora para outras. Vou te dar as quatro condições em que vale e as três em que não vale.

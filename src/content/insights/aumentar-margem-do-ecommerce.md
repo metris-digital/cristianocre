@@ -23,6 +23,7 @@ faq:
     a: "Sim. Cada devolução paga frete de ida e volta, reprocessamento e, às vezes, perda do produto. Reduzir a taxa de troca com descrição melhor, tabela de medidas e curadoria de fornecedor costuma recuperar de 1 a 3 pontos percentuais de margem."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "ecommerce"
 ---
 
 Aumentar a margem do e-commerce sem mexer no preço não é truque, é olhar para o lugar certo. A margem de contribuição de cada venda é montada por sete alavancas diferentes, e o preço é só a mais visível. Mix de produtos, frete, embalagem, fornecedor, canal de venda, devolução e custo de aquisição empurram o mesmo número, e a maioria das lojas nunca mediu quanto cada uma pesa. Este guia abre as sete, mostra o que fazer em cada uma e a faixa de ganho que costumam entregar em pontos percentuais.

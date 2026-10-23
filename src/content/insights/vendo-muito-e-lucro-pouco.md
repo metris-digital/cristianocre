@@ -23,6 +23,8 @@ faq:
     a: "Com os dados disponíveis, cerca de duas semanas para medir os seis pontos principais. A causa costuma estar entre precificação, frete e mix."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "ecommerce"
+cardTexto: "Os 6 suspeitos na ordem certa de investigação, precificação, frete, mix, CAC, devolução e caixa, quando a loja fatura e não sobra dinheiro."
 ---
 
 Faturar muito e lucrar pouco é o problema mais frequente do e-commerce em crescimento, e o mais mal diagnosticado, porque todo mundo tenta resolver pelo lado errado. A reação comum é cortar mídia, o que reduz faturamento sem necessariamente aumentar lucro. Este guia apresenta os seis suspeitos na ordem em que devem ser investigados, do mais provável ao menos provável, e o que verificar em cada um.

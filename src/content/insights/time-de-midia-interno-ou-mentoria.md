@@ -23,6 +23,8 @@ faq:
     a: "Dá, e é uma combinação comum. A agência executa e a mentoria qualifica o dono para cobrar pelos indicadores certos, o que costuma melhorar o resultado do contrato que já existe."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "mentoria"
+cardTexto: "Não é escolha, é ordem. Por que contratar time antes de saber o que pedir é o caminho mais caro, e como saber se a loja está pronta para internalizar."
 ---
 
 Quando a loja chega em um certo volume de investimento em mídia, a pergunta aparece: vale mais contratar gente para dentro ou investir em direção. Ela costuma ser colocada como escolha entre dois gastos parecidos. Não é. É uma pergunta de ordem, e a ordem errada custa caro de um jeito silencioso: você paga salário para alguém executar bem a estratégia errada.

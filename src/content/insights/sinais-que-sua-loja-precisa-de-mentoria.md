@@ -23,6 +23,9 @@ faq:
     a: "Três ou mais dos oito listados. A partir daí, o próximo passo é diagnosticar antes de contratar ou comprar qualquer coisa."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "mentoria"
+cardSelo: "Mentoria · Guia"
+cardTexto: "Como distinguir problema de ferramenta, de execução e de decisão, e por que a maioria das lojas em platô está travada no terceiro."
 ---
 
 Existe um padrão de comportamento em lojas travadas: comprar solução antes de definir o problema. É compreensível, porque comprar ferramenta é rápido, mensurável e dá sensação de progresso. O problema é que ferramenta resolve um tipo específico de limitação, e a maioria das lojas em platô não está limitada por isso. Este guia mostra como distinguir os três tipos de problema e o que cada um exige de verdade.

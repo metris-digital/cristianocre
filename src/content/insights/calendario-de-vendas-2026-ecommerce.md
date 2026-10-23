@@ -28,6 +28,8 @@ faq:
     a: "Dá. Planejamento não é exclusividade de janeiro. Enquanto houver datas relevantes à frente, como eleições, Black Friday e Natal, existe margem para diagnosticar o que aconteceu até aqui, redefinir metas e montar o calendário do período que resta."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "ecommerce"
+cardTexto: "As três estratégias que eu uso para montar o calendário de vendas de um e-commerce: diagnóstico e metas em cascata, movimentos culturais e picos próprios."
 ---
 
 A maior parte das empresas com quem eu converso no Brasil não tem plano nenhum. Elas têm meta de faturamento, o que é diferente, e vão levando o ano no improviso, reagindo às datas conforme elas chegam. Isso funcionou enquanto a mídia era barata e o consumidor comprava por impulso. Em 2026, com a mídia virando commodity e o cliente decidindo de forma mais racional, esse improviso fica caro. O **calendário de vendas** é o coração da estratégia: é ele que transforma o ano em algo previsível em vez de uma sequência de sustos.

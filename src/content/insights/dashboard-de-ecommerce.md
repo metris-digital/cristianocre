@@ -23,6 +23,7 @@ faq:
     a: "A referência clássica de mercado é 3 para 1: o cliente vale ao menos três vezes o que custou para ser adquirido. Abaixo de 3 a operação fica apertada; muito acima de 5 costuma ser sinal de que a loja poderia investir mais em crescimento."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "ecommerce"
 ---
 
 Todo dono de loja que fatura na casa dos R$100 mil por mês já viveu isto: o mês fecha pior que o anterior e ninguém sabe dizer, na hora, o que quebrou. Foi a conversão? O ticket caiu? A mídia ficou mais cara? A resposta existia nos dados o tempo todo, só não estava na mesma tela. Este guia mostra as **métricas de dashboard de e-commerce** que importam, a faixa saudável de mercado de cada uma e com que frequência olhar, para você transformar o acompanhamento em rotina e não em autópsia de fim de mês.

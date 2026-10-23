@@ -24,6 +24,10 @@ faq:
     a: "Ajustes táticos, como campanha e precificação, aparecem em semanas. Mudanças estruturais de canal, mix ou time levam de um a dois trimestres."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "mentoria"
+cardSelo: "Mentoria · Guia"
+cardTitulo: "Mentoria de e-commerce: como funciona, quanto custa e para quem é"
+cardTexto: "O que é, como funciona, quanto custa e para quem faz sentido, o guia da mentoria individual para donos de loja que já operam e querem escalar com margem."
 ---
 
 Mentoria virou palavra genérica no marketing digital, usada para descrever desde curso gravado com grupo de WhatsApp até acompanhamento individual de alto nível. Essa confusão faz muita gente pagar caro por algo que não precisava, e outros tantos descartarem o formato que resolveria o problema deles. Este guia explica o que é uma mentoria de e-commerce de verdade, como funciona na prática, quanto custa no mercado brasileiro e em que situação ela entrega mais do que qualquer alternativa.

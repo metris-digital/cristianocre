@@ -29,6 +29,9 @@ chamada:
   numeroLegenda: "análise gratuita da sua operação"
   botao: "Fazer meu diagnóstico"
   nota: "Gratuito e sem compromisso."
+categoria: "trafego"
+cardSelo: "Margem e lucro · Guia"
+cardTexto: "A conta completa, da verba de mídia ao que sobra depois do custo fixo, e por que o ROAS pode cair enquanto o lucro sobe."
 ---
 
 Existe uma conversa que eu repito toda semana com dono de loja: a de que faturamento não é lucro, e ROAS muito menos. Não é uma frase de efeito — é uma conta, e ela cabe em uma tela. Este guia abre essa conta linha a linha, com os números de um cenário real de R$ 100 mil por mês, para você refazer com os seus.

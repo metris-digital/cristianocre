@@ -24,6 +24,7 @@ faq:
     a: "Dá, desde que a velocidade da verba acompanhe margem, operação e caixa. A escala saudável é limitada pelo elo mais fraco da operação, não pela ambição de crescimento, por isso o ritmo certo é o que a estrutura sustenta com lucro."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "ecommerce"
 ---
 
 Existe um padrão que se repete em loja após loja: o faturamento dispara, a verba de mídia sobe junto, o time comemora o recorde do mês, e três meses depois o caixa está mais apertado do que quando a operação era menor. Os **erros ao escalar e-commerce** raramente aparecem na tela de vendas. Eles aparecem na margem, no prazo de entrega, no CAC e no extrato bancário. Este guia lista os seis erros mais caros, o sintoma que antecede cada um e a faixa de impacto que costumam ter no mercado brasileiro, para você reconhecer o problema antes de ele custar caro.

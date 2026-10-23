@@ -37,6 +37,8 @@ chamada:
   botao: "Ver treinamentos in company"
   link: "/treinamentos-in-company"
   nota: "Com material de apoio e certificado digital."
+categoria: "ecommerce"
+cardTexto: "Curva de produtos, risco de ruptura, prazo real de entrega e a capacidade que a operação tem de verdade."
 ---
 
 Existe um tipo de prejuízo de Black Friday que não aparece na planilha de margem nem no painel de mídia. Ele aparece três semanas depois, em forma de pedido cancelado, reclamação, custo de atendimento e cliente que não volta. Quase sempre a origem é a mesma: a operação vendeu mais do que conseguia entregar, ou vendeu o que não tinha.

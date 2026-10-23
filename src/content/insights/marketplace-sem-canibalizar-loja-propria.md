@@ -27,6 +27,8 @@ faq:
 chamada:
   titulo: "Faça a conta de margem antes de abrir o canal"
   texto: "Receba uma análise gratuita do seu e-commerce e compare quanto realmente sobra em cada canal antes de decidir o que levar para o marketplace."
+categoria: "ecommerce"
+cardTexto: "A conta de margem por canal, a divisão de sortimento e a regra de preço que evita a maior parte dos problemas."
 ---
 
 A decisão de entrar em marketplace quase nunca é discutida como decisão de margem, e é exatamente isso que ela é. O canal entrega audiência que você não precisaria comprar, e cobra por isso em comissão, em regra de preço, em frete e em cupom obrigatório. Se essa conta não for feita antes, o marketplace vira o canal que mais fatura e menos entrega.

@@ -23,6 +23,8 @@ faq:
     a: "Não. São funções complementares. O mentor ajuda a decidir o que pedir e como cobrar; a agência executa. Quando os dois papéis se confundem na mesma pessoa, a avaliação do trabalho perde independência."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "mentoria"
+cardTexto: "O papel real, o que fica de fora, a comparação com consultor, agência e professor, e o momento certo de contratar."
 ---
 
 Mentor de e-commerce virou um termo elástico. Ele é usado para descrever desde quem acompanha uma operação de perto até quem grava aula e vende comunidade. Como as duas coisas custam caro e resolvem problemas diferentes, vale separar. Este texto descreve o que um mentor de e-commerce faz de fato, o que está fora do papel dele, e em que momento essa contratação rende mais do que qualquer outra.

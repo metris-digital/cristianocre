@@ -23,6 +23,8 @@ faq:
     a: "Um aumento moderado do CAC ao escalar é natural, porque você alcança públicos menos qualificados. O problema é quando o CAC cresce mais rápido que a margem. Por isso a decisão de escalar precisa partir da margem de contribuição, não do ROAS do painel."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "trafego"
+cardSelo: "Tráfego pago · Guia"
 ---
 
 Escalar Meta Ads em e-commerce não é apertar o botão de aumentar orçamento. É um sistema com três engrenagens que precisam girar juntas: um ritmo de incremento de verba que o algoritmo aguenta, um volume de criativos novos compatível com o quanto você investe, e um conjunto de sinais de saturação que dizem a hora de parar de pisar no acelerador. Quando qualquer uma dessas engrenagens falha, o CAC estoura, e a culpa quase nunca é do público. Este guia mostra as três com números de referência de mercado.

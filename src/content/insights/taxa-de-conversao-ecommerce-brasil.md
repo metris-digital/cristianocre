@@ -27,6 +27,8 @@ faq:
 chamada:
   titulo: "Leia a sua conversão pelos cortes que importam"
   texto: "Receba uma análise gratuita do seu e-commerce e descubra se o gargalo está no site, no tráfego, na oferta ou no pagamento."
+categoria: "ecommerce"
+cardTexto: "Por que a média de mercado engana, quais cortes olhar e como fazer a pergunta de um jeito que rende resposta."
 ---
 
 A pergunta "qual a taxa de conversão ideal" é a pergunta mais comum e uma das menos úteis do e-commerce. Ela parte de uma premissa errada, a de que existe um número certo, e leva a decisões ruins nos dois sentidos: quem está acima da média relaxa quando poderia crescer, e quem está abaixo se desespera quando o problema pode nem estar na conversão.

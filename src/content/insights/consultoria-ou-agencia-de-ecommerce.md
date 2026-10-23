@@ -34,6 +34,10 @@ chamada:
   titulo: "Descubra o gargalo real antes de contratar qualquer coisa"
   texto: "Uma hora de análise gratuita comigo. A gente olha a sua operação, nomeia onde está travando e define as prioridades dos próximos 90 dias. Sem compromisso."
 feedYoutube: true
+categoria: "servicos"
+cardSelo: "Consultoria · Comparativo"
+cardTitulo: "Consultoria ou agência de e-commerce?"
+cardTexto: "Estratégia contra execução, e por que a ordem de contratação importa tanto."
 ---
 
 Consultoria e agência não competem entre si, fazem coisas diferentes. O problema é que muita loja contrata uma achando que está contratando a outra, e o resultado é verba queimada. Vou separar os papéis e mostrar a ordem que costuma funcionar.

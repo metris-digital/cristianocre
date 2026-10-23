@@ -23,6 +23,8 @@ faq:
     a: "Não. A de performance foca em execução e otimização de mídia. A assessoria é mais ampla, assumindo estratégia e gestão de todo o marketing."
 chamada:
   link: "https://metris.digital/form/"
+categoria: "servicos"
+cardTexto: "O modelo de agência medido por resultado de negócio, vendas, leads e margem, com CAC e ROAS no centro."
 ---
 
 Tem agência que entrega post bonito, relatório cheio de alcance e engajamento, e no fim do mês ninguém sabe dizer se aquilo virou venda. E tem agência que começa a conversa pela pergunta certa: quanto você quer faturar e qual margem precisa sobrar? A segunda é uma agência de performance. A diferença não é cosmética, é de modelo de negócio. Este guia explica o que é, o que ela faz na prática, como cobra e quando contratar uma faz mais sentido do que uma agência tradicional.

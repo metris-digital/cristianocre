@@ -41,6 +41,9 @@ chamada:
   titulo: "O que esse episódio ensina serve para a sua operação?"
   texto: "Em uma hora de análise gratuita comigo, a gente olha a sua loja do mesmo jeito que eu olho a dos convidados: onde está o gargalo real e o que muda o resultado nos próximos 90 dias."
 feedYoutube: true
+categoria: "podcast"
+cardTitulo: "Cachorreiros: uma marca pet D2C nascida de um problema de fornecedor"
+cardTexto: "Bernardo e Mari, da Cachorreiros, sobre criar uma marca pet do zero, por que abrir frentes demais quase custou o foco e o que sustentou o crescimento online."
 ---
 
 Esse foi o primeiro episódio do Performance para Resultados, e escolhi abrir a série com a Cachorreiros por um motivo: é uma marca que fez quase tudo na ordem contrária do que o mercado da Serra Gaúcha costuma fazer. Nasceu digital, escolheu um nicho antes de ter escala, e cresceu sem depender de baixar preço. Bernardo e Mari contam a história desde a viagem que deu a ideia até o erro que quase custou o foco da operação.

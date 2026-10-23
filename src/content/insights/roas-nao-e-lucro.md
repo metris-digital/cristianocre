@@ -23,6 +23,9 @@ faq:
     a: "É o que sobra do preço de venda depois de todos os custos variáveis, produto, frete, embalagem, taxas, comissões, devolução e imposto. É o dinheiro disponível para pagar mídia, estrutura e lucro."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "trafego"
+cardSelo: "Tráfego pago · Guia"
+cardTexto: "Por que o ROAS do painel engana e como calcular o ROAS de equilíbrio da sua loja a partir da margem de contribuição, com a conta aberta."
 ---
 
 O ROAS é a métrica mais citada e a mais mal interpretada do e-commerce. Ele compara receita com investimento em mídia, e só isso. Não sabe qual é a sua margem, não conhece o seu frete, não viu a devolução do mês passado. Este guia mostra como calcular o número que realmente importa, o ROAS de equilíbrio da sua loja, e como ler as métricas de aquisição sem se enganar.

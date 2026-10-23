@@ -27,6 +27,8 @@ faq:
 chamada:
   titulo: "Descubra se a sua verba está no produto errado"
   texto: "Receba uma análise gratuita do seu e-commerce e cruze volume com margem para ver onde a mídia está gerando receita sem gerar lucro."
+categoria: "trafego"
+cardTexto: "O painel de mídia enxerga receita e não enxerga margem. A curva que corrige isso sem aumentar verba."
 ---
 
 Existe um padrão que aparece em quase todo diagnóstico de conta grande. A campanha com melhor retorno da plataforma está empurrando o produto de menor margem do catálogo. O painel mostra números excelentes, o time escala aquilo, o faturamento cresce, e o mês fecha pior que o anterior. Não é falha de operação de mídia. É que a mídia foi organizada por produto e não por lucratividade.

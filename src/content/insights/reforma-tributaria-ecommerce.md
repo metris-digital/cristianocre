@@ -29,6 +29,9 @@ chamada:
   numeroLegenda: "análise gratuita da sua operação"
   botao: "Fazer meu diagnóstico"
   nota: "Gratuito e sem compromisso."
+categoria: "ecommerce"
+cardSelo: "Gestão · Guia"
+cardTexto: "O imposto caminha para ser separado no fluxo do pagamento. O valor devido é o mesmo — o que muda é o capital de giro que você usava sem perceber."
 ---
 
 Eu não sou contador, e este texto não substitui um. Detalhe de alíquota, prazo, regime e data de vigência você não vai encontrar aqui, de propósito: isso está sendo regulamentado, muda de caso para caso e quem responde é a sua contabilidade. O que é a minha função é o outro lado da conta — o que uma mudança dessas faz com a operação de quem vende online. Esse efeito não aparece na guia de imposto. Aparece no capital de giro, no preço, no frete, no parcelamento e em quem você escolhe como fornecedor. É disso que este guia trata.

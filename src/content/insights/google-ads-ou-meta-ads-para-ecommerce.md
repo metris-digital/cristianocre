@@ -32,6 +32,9 @@ chamada:
   titulo: "Descubra o gargalo real da sua operação"
   texto: "Uma hora de análise gratuita comigo. A gente olha a sua loja, nomeia onde está travando e define as prioridades dos próximos 90 dias."
 feedYoutube: true
+categoria: "trafego"
+cardTitulo: "Google Ads ou Meta Ads para e-commerce?"
+cardTexto: "Qual traz mais volume, qual traz o cliente de maior intenção e por que comparar só pelo custo por lead engana."
 ---
 
 É a pergunta que todo dono de e-commerce me faz: coloco a verba no Google ou no Meta? A resposta curta é que a briga está mal colocada. Os dois fazem coisas diferentes no funil, e quem escolhe pelo custo por lead mais barato quase sempre escolhe errado. Vou te mostrar o papel de cada um e como decidir para a sua operação.

@@ -31,6 +31,8 @@ faq:
 chamada:
   titulo: "Descubra por onde começar na sua operação"
   texto: "Receba uma análise gratuita do seu e-commerce e saiba quais itens deste checklist são prioridade na sua loja, enquanto ainda dá tempo de resolver."
+categoria: "ecommerce"
+cardTexto: "O que resolver em cada janela de tempo, de agosto até as trocas de janeiro, e o que é perda de tempo fazer cedo demais."
 ---
 
 A pergunta que eu mais ouço em agosto é "por onde eu começo?". A resposta é que não existe uma lista única, existe uma sequência. Levantar margem por produto em novembro não adianta, porque a decisão já foi tomada. Produzir criativo em agosto também não adianta, porque a oferta ainda vai mudar. O que segue é o checklist da Black Friday organizado pela janela em que cada item realmente funciona.

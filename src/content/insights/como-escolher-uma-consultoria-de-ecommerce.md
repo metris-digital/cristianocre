@@ -34,6 +34,9 @@ chamada:
   titulo: "Descubra o gargalo real antes de contratar qualquer coisa"
   texto: "Uma hora de análise gratuita comigo. A gente olha a sua operação, nomeia onde está travando e define as prioridades dos próximos 90 dias. Sem compromisso."
 feedYoutube: true
+categoria: "servicos"
+cardSelo: "Consultoria · Decisão"
+cardTexto: "Sete critérios honestos e os sinais de alerta que denunciam o vendedor disfarçado de consultor."
 ---
 
 Escolher errado uma consultoria custa mais que o dinheiro: custa meses e a sua confiança no método. Reuni sete critérios que eu usaria para decidir, e no fim os sinais de alerta que fazem eu recusar na hora.

@@ -23,6 +23,7 @@ faq:
     a: "Depende de onde estão seus gargalos. Time interno garante contexto e continuidade; a agência entrega capacidade de produção, especialidade e uma visão externa. A maioria das lojas até R$1 milhão opera num modelo híbrido, com o núcleo dentro de casa e picos ou especialidades na agência."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "ecommerce"
 ---
 
 Um **time de e-commerce** não se monta contratando cargos bonitos. Monta-se resolvendo, na ordem certa, quem responde por cada número da loja: quem traz visitante, quem converte, quem faz o cliente voltar e quem entrega o pedido. Este guia mostra o organograma faixa a faixa, de R$100 mil a R$1 milhão por mês, o que vale internalizar, o que vale deixar em agência e quanto pesa a folha em cada estágio, com faixas de mercado brasileiro.

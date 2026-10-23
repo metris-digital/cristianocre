@@ -23,6 +23,8 @@ faq:
     a: "Tempo. MBA consome noites e fins de semana por um a dois anos. Se a loja está em momento de virada, esse é o recurso mais escasso, e o custo de oportunidade costuma pesar mais que a mensalidade."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "mentoria"
+cardTexto: "Repertório de longo prazo ou solução do gargalo deste trimestre. O que cada um entrega e as três perguntas que decidem."
 ---
 
 A comparação aparece com frequência porque os dois pesam parecido no orçamento de um dono de loja. Mas comparar mentoria de e-commerce com MBA pelo preço é como comparar um remédio com uma faculdade de medicina: são coisas de naturezas diferentes, com prazos diferentes e para problemas diferentes. Este texto separa o que cada um entrega e dá três perguntas que decidem a escolha em poucos minutos.

@@ -41,6 +41,9 @@ chamada:
   titulo: "O que esse episódio ensina serve para a sua operação?"
   texto: "Em uma hora de análise gratuita comigo, a gente olha a sua loja do mesmo jeito que eu olho a dos convidados: onde está o gargalo real e o que muda o resultado nos próximos 90 dias."
 feedYoutube: true
+categoria: "podcast"
+cardTitulo: "Fiber: de máscara na pandemia a marca de performance e saúde"
+cardTexto: "Gustavo, CEO da Fiber, sobre fazer 20 anos de marca em 2, abandonar o produto que a tornou famosa e transformar performance com saúde no seu diferencial."
 ---
 
 A Fiber fez o que quase nenhuma marca consegue: nasceu com um diferencial de posicionamento claro, a coisa mais difícil de construir. Gustavo, CEO e designer de formação, conta como a marca fez, nas palavras dele, vinte anos de reconhecimento em dois, por que teve a coragem de abandonar o produto que a tornou famosa e como uma tese, performance com saúde, virou o eixo de tudo.

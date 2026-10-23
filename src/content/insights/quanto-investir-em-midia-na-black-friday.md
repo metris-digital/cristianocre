@@ -31,6 +31,8 @@ faq:
 chamada:
   titulo: "Revise a sua conta antes de comprometer a verba"
   texto: "Receba uma análise gratuita do seu e-commerce e confira se a meta, o ticket com desconto e o ROAS de equilíbrio da sua operação fecham para novembro."
+categoria: "trafego"
+cardTexto: "A conta em cascata que vai da meta de faturamento até a verba diária, com o custo de mídia de novembro."
 ---
 
 Quase toda loja define a verba de Black Friday olhando para trás: gastei tanto no ano passado, esse ano coloco um pouco mais. O problema é que essa conta não sabe se o ano passado foi bom. Ela repete o resultado, inclusive o ruim. A conta que funciona vai no sentido contrário: parte da meta de faturamento e desce até quanto precisa entrar de verba por dia para que a meta seja possível.

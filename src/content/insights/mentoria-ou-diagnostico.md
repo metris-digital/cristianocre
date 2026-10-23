@@ -23,6 +23,8 @@ faq:
     a: "Serve, e costuma render ainda mais. Uma leitura externa e isenta mostra se a verba está no lugar certo, se o time olha as métricas que importam e onde a operação atual deixa dinheiro na mesa, sem substituir quem já executa."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "mentoria"
+cardSelo: "Mentoria · Guia"
 ---
 
 Quando o faturamento estaciona ou o lucro some, a reação mais comum é procurar um mentor, uma consultoria ou uma agência, alguém que “resolva”. O problema é que contratar antes de entender o gargalo é apostar dinheiro no escuro. Este guia responde à dúvida de **mentoria ou diagnóstico no e-commerce**: mostra por que o diagnóstico vem quase sempre primeiro, o que sai de um Diagnóstico 360 na prática e como decidir qual caminho faz sentido para o seu momento.

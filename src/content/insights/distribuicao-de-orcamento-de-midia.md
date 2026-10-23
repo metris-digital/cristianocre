@@ -27,6 +27,8 @@ faq:
 chamada:
   titulo: "Revise a divisão da sua verba com dado"
   texto: "Receba uma análise gratuita do seu e-commerce e descubra de onde vem a sua venda hoje e onde a verba está mal distribuída."
+categoria: "trafego"
+cardTexto: "Por que só investir em fundo trava o crescimento e como avaliar topo sem usar a régua errada."
 ---
 
 Colocar toda a verba em fundo de funil é a decisão mais racional no curto prazo e a mais cara no médio. Faz sentido porque o retorno aparece rápido e é fácil de defender em reunião. Trava porque fundo de funil só colhe demanda que já existe, e demanda que já existe é finita. Quando ela acaba, o custo sobe e ninguém entende o motivo.

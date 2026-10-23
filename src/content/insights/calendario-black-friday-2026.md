@@ -31,6 +31,8 @@ faq:
 chamada:
   titulo: "Monte o seu calendário com quem já passou por várias Black Fridays"
   texto: "Receba uma análise gratuita do seu e-commerce e saiba o que a sua operação precisa resolver em cada janela, do esquenta até as trocas de janeiro."
+categoria: "ecommerce"
+cardTexto: "As seis fases da data, do esquenta de novembro às trocas de janeiro, com o que decidir em cada uma."
 ---
 
 Perguntar "quando é a Black Friday" parece uma questão de data no calendário, e é a pergunta errada. A resposta útil não é um dia, é uma sequência de janelas, cada uma com um objetivo diferente e um custo de mídia diferente. Quem entende essa sequência entra na data com verba distribuída no lugar certo. Quem só marca o dia 27 concentra tudo no momento mais caro.

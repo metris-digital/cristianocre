@@ -27,6 +27,8 @@ faq:
 chamada:
   titulo: "Decida com a conta feita, não pela intuição"
   texto: "Receba uma análise gratuita do seu e-commerce e compare o custo real de cada caminho na sua operação."
+categoria: "ecommerce"
+cardTexto: "Custo real, velocidade e risco de cada modelo, e por que o híbrido é a resposta mais comum."
 ---
 
 Preciso começar por uma transparência: a Metris é uma agência, então eu tenho lado nessa conversa. Justamente por isso vou tentar ser mais duro com o meu lado do que com o outro. O que eu vejo em diagnóstico é que a escolha entre interno e agência quase nunca é o que decide o resultado. O que decide é se existe alguém, em qualquer um dos dois lados, com clareza do problema e autoridade para resolver.

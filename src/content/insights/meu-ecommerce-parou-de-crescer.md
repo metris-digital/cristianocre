@@ -23,6 +23,8 @@ faq:
     a: "Vale quando a concentração de receita em um único canal passa de 70%. Antes disso, costuma ser mais rentável aprofundar o canal que já funciona."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "ecommerce"
+cardTexto: "Os 5 tetos que travam uma loja nessa faixa e a ordem certa de investigar antes de aumentar a verba. Quase nunca é falta de tráfego."
 ---
 
 O platô de R$100 mil por mês é o mais comum do e-commerce brasileiro, e quase nunca é o problema que o dono imagina. A reação natural é olhar para a mídia, porque foi a mídia que trouxe a loja até aqui. Só que o que funciona para sair do zero e chegar aos R$100 mil é exatamente o que impede a loja de passar disso. Este guia mostra os cinco tetos que causam o platô, como identificar qual é o seu e em que ordem investigar antes de gastar mais um real.

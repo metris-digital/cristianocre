@@ -23,6 +23,8 @@ faq:
     a: "Quando a campanha converte acima do ROAS de equilíbrio, o criativo tem tração, a página vende e ainda há público não saturado. Nesse cenário, mais verba amplia um sistema que já funciona, em vez de escalar um vazamento."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "trafego"
+cardSelo: "Tráfego pago · Guia"
 ---
 
 Quando o **tráfego pago trava no e-commerce**, o roteiro costuma se repetir: as vendas estagnam ou caem, o ROAS encolhe, alguém sugere “subir a verba para recuperar”, e o resultado piora. O erro não está na verba, está na ordem. Aumentar orçamento é a **última** hipótese de um diagnóstico, não a primeira. Este guia mostra a árvore de decisão para descobrir se o problema é oferta, criativo, página, público ou margem, com uma tabela de sintoma, causa provável e o que testar, e as faixas de mercado que ajudam a ler cada métrica.

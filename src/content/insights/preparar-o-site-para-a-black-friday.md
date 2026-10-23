@@ -31,6 +31,9 @@ faq:
 chamada:
   titulo: "Descubra onde a sua loja está perdendo venda"
   texto: "Receba uma análise gratuita do seu e-commerce e identifique os gargalos de conversão enquanto ainda dá tempo de corrigir antes de novembro."
+categoria: "ecommerce"
+cardTitulo: "Preparar o site para o pico da Black Friday"
+cardTexto: "Velocidade no celular, página de produto, checkout e a taxa de aprovação de pagamento, que é a perda mais silenciosa."
 ---
 
 Existe uma assimetria cruel na Black Friday. Em setembro, um site 15% mais lento custa algumas vendas. No dia 27, o mesmo site custa a diferença entre o mês ter dado lucro ou não, porque o volume amplifica cada ponto de atrito e porque cada visita ali já foi paga a preço de leilão disputado. O trabalho de conversão precisa estar terminado antes de novembro, não durante.

@@ -37,6 +37,8 @@ chamada:
   botao: "Conhecer a mentoria"
   link: "/mentoria"
   nota: "A entrada começa por um diagnóstico."
+categoria: "ecommerce"
+cardTexto: "A margem não vem da primeira compra. Como transformar o pico de novembro em base recorrente em dezembro e janeiro."
 ---
 
 Se você olhar isoladamente para a Black Friday, ela é o pior negócio do ano: o clique mais caro, o preço mais baixo e o cliente mais sensível a desconto que existe. A data só faz sentido financeiro se for tratada como aquisição, e não como venda. Ou seja: o resultado dela não se mede em novembro, se mede em fevereiro.

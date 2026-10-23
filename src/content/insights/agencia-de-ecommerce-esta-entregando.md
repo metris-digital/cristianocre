@@ -27,6 +27,8 @@ faq:
 chamada:
   titulo: "Uma leitura independente antes de decidir"
   texto: "Receba uma análise gratuita do seu e-commerce e entenda o que está funcionando e o que não está, sem depender de quem opera as campanhas hoje."
+categoria: "ecommerce"
+cardTexto: "As seis perguntas da reunião mensal, os sinais de alerta e o que não é sinal de alerta."
 ---
 
 A dúvida quase sempre aparece do mesmo jeito. A loja está vendendo, os relatórios chegam bonitos, a reunião mensal acontece, e mesmo assim o dono tem a sensação de que poderia estar melhor. Essa sensação normalmente não é implicância. Ela costuma vir de uma diferença real entre o que a agência está medindo e o que a empresa precisa.

@@ -23,6 +23,7 @@ faq:
     a: "Como exceção, não como régua fixa: reativar um cliente inativo há muitos ciclos, ou girar um estoque parado. O erro é transformar o cupom no motivo padrão de toda volta, o que vicia a base e some com a margem."
 chamada:
   texto: "Receba uma análise gratuita do seu e-commerce e descubra onde estão as maiores oportunidades de crescimento."
+categoria: "ecommerce"
 ---
 
 Quase toda loja que já fatura bem tem o mesmo reflexo quando a recompra cai: dispara um cupom para a base. Funciona no primeiro mês, vira rotina no terceiro e, no sexto, ninguém compra mais sem promoção. A **recompra no e-commerce** é o lucro que já estava dentro de casa, e o desconto é a forma mais cara de acessá-lo. Este guia mostra por que o desconto destrói margem, qual é a taxa de recompra saudável por tipo de produto e o que colocar no lugar do cupom para o cliente voltar sozinho.

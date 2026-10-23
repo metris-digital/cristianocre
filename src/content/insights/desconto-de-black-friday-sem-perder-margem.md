@@ -37,6 +37,8 @@ chamada:
   botao: "Conhecer a mentoria"
   link: "/mentoria"
   nota: "A entrada começa por um diagnóstico."
+categoria: "ecommerce"
+cardTexto: "Até onde o desconto pode ir antes de virar prejuízo, e cinco mecânicas que vendem sem entregar margem."
 ---
 
 Quando eu pergunto em um diagnóstico como a loja definiu o desconto da Black Friday, a resposta quase nunca é uma conta. É uma referência: "o concorrente deu 40%", "ano passado foi 30%", "o marketplace exigiu 25%". Nenhuma dessas frases tem qualquer relação com o quanto sobra na sua operação depois de vender. E é exatamente aí que o prejuízo nasce.

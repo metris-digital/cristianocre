@@ -38,6 +38,9 @@ chamada:
   titulo: "Pronto para o que vem, sem gastar no que ainda não é prioridade"
   texto: "Em uma hora de análise gratuita comigo, a gente vê o que arrumar primeiro na sua operação para você chegar preparado nas próximas mudanças do mercado."
 feedYoutube: true
+categoria: "ecommerce"
+cardSelo: "Visão · Evento"
+cardTexto: "O que separei do Fórum E-commerce Brasil, com olho de consultoria: os 4S do Google, agentes de compra, IA no atendimento e o que fazer com cada tendência."
 ---
 
 Passei o Fórum E-commerce Brasil ouvindo palco, conversando em stand e trocando ideia com lojista e fornecedor. Em vez de sair listando tudo que foi dito, separei o que de fato muda a sua operação, e li cada tendência com olho de consultoria: não "o que é novo", mas "o que fazer com isso na sua loja". Se você não foi, este é o resumo que eu queria ter recebido.
