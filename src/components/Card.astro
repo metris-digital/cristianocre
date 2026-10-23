@@ -16,7 +16,7 @@ const { post, data, comCategoria = true } = Astro.props;
 const d = post.data;
 const episodio = post.collection === 'podcast';
 const alt = d.capaAlt ?? titulo(post);
-const webp = d.imagem.replace(/\.jpg$/, '.webp');
+const webp = d.imagem.replace(/\.(jpg|png)$/, '.webp');
 // WebP só quando o arquivo existe (o build roda na raiz do projeto).
 const temWebp = existsSync(`public${webp}`);
 ---

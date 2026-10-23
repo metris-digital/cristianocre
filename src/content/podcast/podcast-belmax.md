@@ -13,7 +13,7 @@ legenda: "Episódio do Performance para Resultados com Otávio Sandrin, da <a hr
 pilar:
   titulo: "Podcast Performance para Resultados"
   url: "/podcast#serie"
-ldExtra: {"about":{"@type":"Organization","name":"Belmax","url":"https://loja.belmaxmoveis.com.br/","description":"Marca de móveis do Grupo Sandrin, especializada em dormitórios, com venda física e digital.","founder":[{"@type":"Person","name":"Grupo Sandrin"}]},"mentions":[{"@type":"Person","name":"Otávio Sandrin","jobTitle":"Gestor de e-commerce da Belmax"},{"@type":"Person","name":"Renata Sandrin","jobTitle":"Diretora executiva da área de móveis do Grupo Sandrin"}]}
+ldExtra: { "about": { "@type": "Organization", "name": "Belmax", "url": "https://loja.belmaxmoveis.com.br/", "description": "Marca de móveis do Grupo Sandrin, especializada em dormitórios, com venda física e digital.", "founder": [ { "@type": "Person", "name": "Grupo Sandrin" } ] }, "mentions": [ { "@type": "Person", "name": "Otávio Sandrin", "jobTitle": "Gestor de e-commerce da Belmax" }, { "@type": "Person", "name": "Renata Sandrin", "jobTitle": "Diretora executiva da área de móveis do Grupo Sandrin" } ] }
 videoDados:
   id: "zOeW1MDZifo"
   nome: "Belmax: como um grupo de 55 anos entrou no digital sem perder a identidade | Performance para Resultados"

@@ -1,0 +1,137 @@
+{
+  "versao": 1,
+  "pastaPublica": "public",
+  "taxonomia": { "colecao": "insights", "campo": "categoria" },
+  "colecoes": [
+    {
+      "id": "insights",
+      "nome": "Posts",
+      "nomeItem": "post",
+      "pasta": "src/content/insights",
+      "formato": "markdown",
+      "url": "/{slug}",
+      "campoTitulo": "title",
+      "campoData": "pubDate",
+      "campoAtualizado": "updatedDate",
+      "pastaImagens": "img",
+      "campoRascunho": "draft",
+      "colunas": ["title", "categoria", "pubDate"],
+      "campos": [
+        { "nome": "title", "rotulo": "Título da página", "tipo": "texto", "obrigatorio": true, "max": 110, "ajuda": "O título grande do topo. O trecho entre asteriscos ganha o destaque em degradê: Consultoria de e-commerce: *quando vale a pena*." },
+        { "nome": "seoTitle", "rotulo": "Título para o Google", "tipo": "texto", "obrigatorio": true, "max": 80, "ajuda": "Aparece na aba e no Google. Acima de 70 caracteres o Google corta." },
+        { "nome": "description", "rotulo": "Descrição para o Google", "tipo": "texto-longo", "obrigatorio": true, "min": 80, "max": 200, "ajuda": "O texto embaixo do título no Google. Acima de 160 caracteres ele corta." },
+        { "nome": "selo", "rotulo": "Selo do topo", "tipo": "texto", "obrigatorio": true, "ajuda": "Ex.: Conversão · Checkout" },
+        { "nome": "sub", "rotulo": "Subtítulo do topo", "tipo": "texto-longo", "obrigatorio": true },
+        {
+          "nome": "categoria", "rotulo": "Categoria", "tipo": "opcao", "obrigatorio": true, "ajuda": "O filtro da página Insights.",
+          "opcoes": [
+            { "valor": "ecommerce", "rotulo": "E-commerce" },
+            { "valor": "trafego", "rotulo": "Tráfego pago" },
+            { "valor": "mentoria", "rotulo": "Mentoria" },
+            { "valor": "servicos", "rotulo": "Marketing" }
+          ]
+        },
+        { "nome": "pubDate", "rotulo": "Publicado em", "tipo": "data", "obrigatorio": true },
+        { "nome": "updatedDate", "rotulo": "Atualizado em", "tipo": "data", "ajuda": "O CMS preenche com a data de hoje a cada publicação. Aparece na linha do autor." },
+        { "nome": "leitura", "rotulo": "Minutos de leitura", "tipo": "numero", "obrigatorio": true },
+        { "nome": "imagem", "rotulo": "Imagem", "tipo": "imagem", "obrigatorio": true, "ajuda": "JPG de 1200 × 675. Vai no compartilhamento, no card da lista e, se marcado abaixo, no topo do post." },
+        { "nome": "capa", "rotulo": "Mostrar a imagem no topo do post", "tipo": "sim-nao", "padrao": false },
+        { "nome": "capaAlt", "rotulo": "Descrição da imagem", "tipo": "texto", "ajuda": "Para quem não enxerga a imagem. Em branco, usa o título." },
+        { "nome": "legenda", "rotulo": "Legenda da imagem", "tipo": "texto" },
+        {
+          "nome": "faq", "rotulo": "Perguntas frequentes", "tipo": "lista", "obrigatorio": true, "min": 1,
+          "campos": [
+            { "nome": "q", "rotulo": "Pergunta", "tipo": "texto" },
+            { "nome": "a", "rotulo": "Resposta", "tipo": "texto-longo" }
+          ]
+        },
+        {
+          "nome": "relacionados", "rotulo": "Continue lendo", "tipo": "lista", "max": 5, "ajuda": "Links para outros posts, no fim do texto. Endereço no formato /nome-do-post.",
+          "campos": [
+            { "nome": "titulo", "rotulo": "Texto do link", "tipo": "texto" },
+            { "nome": "url", "rotulo": "Endereço", "tipo": "texto" }
+          ]
+        },
+        {
+          "nome": "chamada", "rotulo": "Chamada do fim", "tipo": "grupo", "ajuda": "O bloco verde do diagnóstico. Em branco, usa o texto padrão.",
+          "campos": [
+            { "nome": "selo", "rotulo": "Selo", "tipo": "texto", "obrigatorio": false },
+            { "nome": "titulo", "rotulo": "Título", "tipo": "texto", "obrigatorio": false },
+            { "nome": "texto", "rotulo": "Texto", "tipo": "texto-longo", "obrigatorio": false },
+            { "nome": "botao", "rotulo": "Botão", "tipo": "texto", "obrigatorio": false },
+            { "nome": "link", "rotulo": "Link do botão", "tipo": "texto", "obrigatorio": false }
+          ]
+        },
+        { "nome": "cardTitulo", "rotulo": "Título no card", "tipo": "texto", "ajuda": "Na lista de Insights. Em branco, usa o título da página." },
+        { "nome": "cardTexto", "rotulo": "Texto do card", "tipo": "texto-longo", "ajuda": "Na lista de Insights. Em branco, usa a descrição para o Google." },
+        { "nome": "cardSelo", "rotulo": "Selo do card", "tipo": "texto", "ajuda": "Em branco, usa o selo do topo." },
+        { "nome": "secaoLlms", "rotulo": "Seção no llms.txt", "tipo": "texto", "ajuda": "Nome de uma seção do llms.txt, como Margem, preço e lucro. Em branco, o post entra em Outros artigos." },
+        { "nome": "draft", "rotulo": "Rascunho", "tipo": "sim-nao", "padrao": false, "ajuda": "Rascunho não vai ao ar." }
+      ],
+      "corpo": { "rotulo": "Texto" }
+    },
+    {
+      "id": "podcast",
+      "nome": "Podcast",
+      "nomeItem": "episódio",
+      "pasta": "src/content/podcast",
+      "formato": "markdown",
+      "url": "/{slug}",
+      "campoTitulo": "title",
+      "campoData": "pubDate",
+      "campoAtualizado": "updatedDate",
+      "pastaImagens": "img",
+      "campoRascunho": "draft",
+      "colunas": ["title", "pubDate"],
+      "campos": [
+        { "nome": "title", "rotulo": "Título da página", "tipo": "texto", "obrigatorio": true, "max": 110, "ajuda": "O trecho entre asteriscos ganha o destaque em degradê." },
+        { "nome": "seoTitle", "rotulo": "Título para o Google", "tipo": "texto", "obrigatorio": true, "max": 80, "ajuda": "Acima de 70 caracteres o Google corta." },
+        { "nome": "description", "rotulo": "Descrição para o Google", "tipo": "texto-longo", "obrigatorio": true, "min": 80, "max": 200, "ajuda": "Acima de 160 caracteres o Google corta." },
+        { "nome": "selo", "rotulo": "Selo do topo", "tipo": "texto", "obrigatorio": true, "ajuda": "Ex.: Podcast · Episódio 008" },
+        { "nome": "sub", "rotulo": "Subtítulo do topo", "tipo": "texto-longo", "obrigatorio": true },
+        { "nome": "categoria", "rotulo": "Categoria", "tipo": "opcao", "obrigatorio": true, "padrao": "podcast", "opcoes": [{ "valor": "podcast", "rotulo": "Podcast" }] },
+        { "nome": "pubDate", "rotulo": "Publicado em", "tipo": "data", "obrigatorio": true },
+        { "nome": "updatedDate", "rotulo": "Atualizado em", "tipo": "data", "ajuda": "O CMS preenche com a data de hoje a cada publicação." },
+        { "nome": "mostrarPublicado", "rotulo": "Mostrar a data de publicação", "tipo": "sim-nao", "padrao": false },
+        { "nome": "leitura", "rotulo": "Minutos de leitura", "tipo": "numero", "obrigatorio": true },
+        { "nome": "video", "rotulo": "Vídeo do episódio", "tipo": "youtube", "obrigatorio": true, "ajuda": "Cole o link do YouTube. Vai no topo da página, no lugar da imagem." },
+        { "nome": "imagem", "rotulo": "Imagem", "tipo": "imagem", "obrigatorio": true, "ajuda": "JPG de 1200 × 675, para o compartilhamento e o card da lista." },
+        { "nome": "legenda", "rotulo": "Legenda do vídeo", "tipo": "texto" },
+        {
+          "nome": "videoDados", "rotulo": "Dados do vídeo para o Google", "tipo": "grupo",
+          "campos": [
+            { "nome": "id", "rotulo": "ID do vídeo", "tipo": "texto", "ajuda": "O mesmo do vídeo do episódio: o trecho depois de watch?v=." },
+            { "nome": "nome", "rotulo": "Título do vídeo no YouTube", "tipo": "texto" },
+            { "nome": "descricao", "rotulo": "Descrição", "tipo": "texto-longo" },
+            { "nome": "data", "rotulo": "Publicado no YouTube em", "tipo": "data", "obrigatorio": false },
+            { "nome": "canal", "rotulo": "Canal", "tipo": "texto", "obrigatorio": false }
+          ]
+        },
+        {
+          "nome": "faq", "rotulo": "Perguntas frequentes", "tipo": "lista", "obrigatorio": true, "min": 1,
+          "campos": [
+            { "nome": "q", "rotulo": "Pergunta", "tipo": "texto" },
+            { "nome": "a", "rotulo": "Resposta", "tipo": "texto-longo" }
+          ]
+        },
+        {
+          "nome": "chamada", "rotulo": "Chamada do fim", "tipo": "grupo", "ajuda": "Em branco, usa o texto padrão.",
+          "campos": [
+            { "nome": "selo", "rotulo": "Selo", "tipo": "texto", "obrigatorio": false },
+            { "nome": "titulo", "rotulo": "Título", "tipo": "texto", "obrigatorio": false },
+            { "nome": "texto", "rotulo": "Texto", "tipo": "texto-longo", "obrigatorio": false },
+            { "nome": "botao", "rotulo": "Botão", "tipo": "texto", "obrigatorio": false },
+            { "nome": "link", "rotulo": "Link do botão", "tipo": "texto", "obrigatorio": false }
+          ]
+        },
+        { "nome": "cardTitulo", "rotulo": "Título no card", "tipo": "texto", "ajuda": "Nas listas de Insights e do Podcast. Em branco, usa o título da página." },
+        { "nome": "cardTexto", "rotulo": "Texto do card", "tipo": "texto-longo", "ajuda": "Em branco, usa a descrição para o Google." },
+        { "nome": "draft", "rotulo": "Rascunho", "tipo": "sim-nao", "padrao": false }
+      ],
+      "corpo": { "rotulo": "Texto" }
+    }
+  ],
+  "regras": [
+    { "procurar": "[inserir dado real]", "mensagem": "Ainda falta um dado real. O post não vai ao ar com esse marcador.", "nivel": "erro" }
+  ]
+}

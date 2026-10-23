@@ -13,7 +13,7 @@ legenda: "Episódio do Performance para Resultados com Myron Bercker, da <a href
 pilar:
   titulo: "Podcast Performance para Resultados"
   url: "/podcast#serie"
-ldExtra: {"about":{"@type":"Organization","name":"iBob","url":"https://ibob.com.br/","description":"Plataforma omnichannel de acionamentos e automação industrial, com venda por e-commerce, marketplace e B2B.","founder":[{"@type":"Person","name":"Myron Bercker"}]},"mentions":[{"@type":"Person","name":"Myron Bercker","jobTitle":"Fundador da iBob"}]}
+ldExtra: { "about": { "@type": "Organization", "name": "iBob", "url": "https://ibob.com.br/", "description": "Plataforma omnichannel de acionamentos e automação industrial, com venda por e-commerce, marketplace e B2B.", "founder": [ { "@type": "Person", "name": "Myron Bercker" } ] }, "mentions": [ { "@type": "Person", "name": "Myron Bercker", "jobTitle": "Fundador da iBob" } ] }
 videoDados:
   id: "PjOTpKmltw8"
   nome: "iBob: como vender motor elétrico e automação industrial pela internet | Performance para Resultados"

@@ -11,7 +11,7 @@ imagem: "/img/forum-ecommerce-brasil-tendencias.jpg"
 capa: true
 capaAlt: "Tendências do Fórum E-commerce Brasil aplicadas ao e-commerce, por Cristiano Creczyenski"
 legenda: "As tendências do Fórum E-commerce Brasil traduzidas para a operação de quem vende online."
-ldExtra: {"about":[{"@type":"Thing","name":"Fórum E-commerce Brasil"},{"@type":"Thing","name":"Tendências de e-commerce"},{"@type":"Thing","name":"Inteligência artificial no varejo"}]}
+ldExtra: { "about": [ { "@type": "Thing", "name": "Fórum E-commerce Brasil" }, { "@type": "Thing", "name": "Tendências de e-commerce" }, { "@type": "Thing", "name": "Inteligência artificial no varejo" } ] }
 rich: true
 faq:
   - q: "O que é o Fórum E-commerce Brasil?"

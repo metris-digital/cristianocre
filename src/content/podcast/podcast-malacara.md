@@ -13,7 +13,7 @@ legenda: "Episódio do Performance para Resultados com Francis, da <a href=\"htt
 pilar:
   titulo: "Podcast Performance para Resultados"
   url: "/podcast#serie"
-ldExtra: {"about":{"@type":"Organization","name":"Malacara","url":"https://www.malacara.com.br/","description":"Marca brasileira de calçados e artigos de couro, com fábrica própria e venda direta ao consumidor final.","founder":[{"@type":"Person","name":"Francis"}]},"mentions":[{"@type":"Person","name":"Francis","jobTitle":"Cofundador da Malacara"}]}
+ldExtra: { "about": { "@type": "Organization", "name": "Malacara", "url": "https://www.malacara.com.br/", "description": "Marca brasileira de calçados e artigos de couro, com fábrica própria e venda direta ao consumidor final.", "founder": [ { "@type": "Person", "name": "Francis" } ] }, "mentions": [ { "@type": "Person", "name": "Francis", "jobTitle": "Cofundador da Malacara" } ] }
 videoDados:
   id: "TM0KWvq_G6U"
   nome: "Malacara: a marca de calçados que nasceu na crise e vende direto ao consumidor | Performance para Resultados"

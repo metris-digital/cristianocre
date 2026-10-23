@@ -14,7 +14,7 @@ legenda: "Segmentação, aquecimento e sequência de disparos no canal que não 
 pilar:
   titulo: "/black-friday-para-ecommerce"
   url: "/black-friday-para-ecommerce"
-ldExtra: {"about":{"@type":"Event","name":"Black Friday 2026","startDate":"2026-11-27","eventAttendanceMode":"https://schema.org/OnlineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"VirtualLocation","url":"https://www.cristianocre.com"}},"isPartOf":{"@type":"WebPage","@id":"https://www.cristianocre.com/black-friday-para-ecommerce"}}
+ldExtra: { "about": { "@type": "Event", "name": "Black Friday 2026", "startDate": "2026-11-27", "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": { "@type": "VirtualLocation", "url": "https://www.cristianocre.com" } }, "isPartOf": { "@type": "WebPage", "@id": "https://www.cristianocre.com/black-friday-para-ecommerce" } }
 faq:
   - q: "Por que o e-mail é o canal mais rentável da Black Friday?"
     a: "Porque o custo de falar com quem já está na sua base não sobe em novembro, diferente do leilão de mídia. E quem já comprou converte com uma barreira menor, já que dúvidas sobre prazo, atendimento e confiança foram respondidas na primeira compra."

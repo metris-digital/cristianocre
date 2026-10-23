@@ -8,7 +8,7 @@ pubDate: 2026-09-10
 updatedDate: 2026-09-10
 leitura: 8
 imagem: "/img/reforma-tributaria-ecommerce.jpg"
-ldExtra: {"publisher":{"@type":"Organization","name":"Metris","url":"https://metris.digital"}}
+ldExtra: { "publisher": { "@type": "Organization", "name": "Metris", "url": "https://metris.digital" } }
 estiloAntigo: true
 faqTitulo: "O que mais perguntam sobre isso"
 faq:

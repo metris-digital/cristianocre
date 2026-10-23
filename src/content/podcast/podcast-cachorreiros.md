@@ -13,7 +13,7 @@ legenda: "Episódio do Performance para Resultados com Bernardo, da <a href=\"ht
 pilar:
   titulo: "Podcast Performance para Resultados"
   url: "/podcast#serie"
-ldExtra: {"about":{"@type":"Organization","name":"Cachorreiros","url":"https://www.instagram.com/cachorreiros_line/","description":"Marca brasileira de acessórios para pets, com produção própria e venda direta ao consumidor.","founder":[{"@type":"Person","name":"Bernardo"},{"@type":"Person","name":"Mari"}]},"mentions":[{"@type":"Person","name":"Bernardo","jobTitle":"Cofundador da Cachorreiros"},{"@type":"Person","name":"Mari","jobTitle":"Cofundadora e diretora criativa da Cachorreiros"}]}
+ldExtra: { "about": { "@type": "Organization", "name": "Cachorreiros", "url": "https://www.instagram.com/cachorreiros_line/", "description": "Marca brasileira de acessórios para pets, com produção própria e venda direta ao consumidor.", "founder": [ { "@type": "Person", "name": "Bernardo" }, { "@type": "Person", "name": "Mari" } ] }, "mentions": [ { "@type": "Person", "name": "Bernardo", "jobTitle": "Cofundador da Cachorreiros" }, { "@type": "Person", "name": "Mari", "jobTitle": "Cofundadora e diretora criativa da Cachorreiros" } ] }
 videoDados:
   id: "Cm5ebcTOSM4"
   nome: "Cachorreiros: como uma marca pet D2C nasceu de um problema de fornecedor | Performance para Resultados"

@@ -14,7 +14,7 @@ legenda: "Velocidade, página de produto, checkout e aprovação de pagamento an
 pilar:
   titulo: "/black-friday-para-ecommerce"
   url: "/black-friday-para-ecommerce"
-ldExtra: {"about":{"@type":"Event","name":"Black Friday 2026","startDate":"2026-11-27","eventAttendanceMode":"https://schema.org/OnlineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"VirtualLocation","url":"https://www.cristianocre.com"}},"isPartOf":{"@type":"WebPage","@id":"https://www.cristianocre.com/black-friday-para-ecommerce"}}
+ldExtra: { "about": { "@type": "Event", "name": "Black Friday 2026", "startDate": "2026-11-27", "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": { "@type": "VirtualLocation", "url": "https://www.cristianocre.com" } }, "isPartOf": { "@type": "WebPage", "@id": "https://www.cristianocre.com/black-friday-para-ecommerce" } }
 faq:
   - q: "O que revisar no site antes da Black Friday?"
     a: "Quatro pontos, nessa ordem: velocidade no celular, página dos produtos que vão entrar em promoção, checkout testado com uma compra real e taxa de aprovação de pagamento conversada com o intermediador."

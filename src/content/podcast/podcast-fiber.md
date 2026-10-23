@@ -13,7 +13,7 @@ legenda: "Episódio do Performance para Resultados com Gustavo, da <a href=\"htt
 pilar:
   titulo: "Podcast Performance para Resultados"
   url: "/podcast#serie"
-ldExtra: {"about":{"@type":"Organization","name":"Fiber","url":"https://fiberoficial.com.br/","description":"Marca brasileira de calçados e acessórios de alta tecnologia para performance e bem-estar.","founder":[{"@type":"Person","name":"Gustavo"}]},"mentions":[{"@type":"Person","name":"Gustavo","jobTitle":"CEO e fundador da Fiber"}]}
+ldExtra: { "about": { "@type": "Organization", "name": "Fiber", "url": "https://fiberoficial.com.br/", "description": "Marca brasileira de calçados e acessórios de alta tecnologia para performance e bem-estar.", "founder": [ { "@type": "Person", "name": "Gustavo" } ] }, "mentions": [ { "@type": "Person", "name": "Gustavo", "jobTitle": "CEO e fundador da Fiber" } ] }
 videoDados:
   id: "8IxLMEtMWZg"
   nome: "Fiber: de uma máscara na pandemia a uma marca de performance e saúde | Performance para Resultados"

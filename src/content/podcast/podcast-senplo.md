@@ -14,7 +14,7 @@ legenda: "Episódio 007 do Performance para Resultados, com Daniel Bossle, cofun
 pilar:
   titulo: "Podcast Performance para Resultados"
   url: "/podcast#serie"
-ldExtra: {"about":{"@type":"Organization","name":"Senplo","url":"https://senplo.com.br/","description":"Marca brasileira de moda masculina, de Farroupilha, na Serra Gaúcha.","founder":[{"@type":"Person","name":"Rafael Schneider"},{"@type":"Person","name":"Daniel Bossle"}]},"mentions":[{"@type":"Person","name":"Daniel Bossle","jobTitle":"Cofundador da Senplo"},{"@type":"Person","name":"Rafael Schneider","jobTitle":"Cofundador da Senplo"}]}
+ldExtra: { "about": { "@type": "Organization", "name": "Senplo", "url": "https://senplo.com.br/", "description": "Marca brasileira de moda masculina, de Farroupilha, na Serra Gaúcha.", "founder": [ { "@type": "Person", "name": "Rafael Schneider" }, { "@type": "Person", "name": "Daniel Bossle" } ] }, "mentions": [ { "@type": "Person", "name": "Daniel Bossle", "jobTitle": "Cofundador da Senplo" }, { "@type": "Person", "name": "Rafael Schneider", "jobTitle": "Cofundador da Senplo" } ] }
 videoDados:
   id: "aoSUM41Ynw8"
   nome: "Senplo no Performance para Resultados: do atacado ao digital com lançamento semanal"

@@ -9,9 +9,11 @@ leitura: 8
 imagem: "/img/chatgpt-ads-para-ecommerce.jpg"
 capa: true
 capaAlt: "ChatGPT Ads e o que os anúncios da OpenAI mudam para o e-commerce, por Cristiano Creczyenski"
-ldExtra: {"about":[{"@type":"Thing","name":"ChatGPT Ads"},{"@type":"Thing","name":"Anúncios da OpenAI"},{"@type":"Thing","name":"Tráfego pago para e-commerce"}]}
+ldExtra: { "about": [ { "@type": "Thing", "name": "ChatGPT Ads" }, { "@type": "Thing", "name": "Anúncios da OpenAI" }, { "@type": "Thing", "name": "Tráfego pago para e-commerce" } ] }
 rich: true
-faqIntro: "<h2>Antes de pensar em anúncio dentro da IA</h2>\n<p>Existe um trabalho anterior e mais barato: ser recomendado organicamente quando alguém pergunta. O que decide isso não é truque de otimização, é ficha de produto completa, review e validação de terceiros. Está em <a href=\"/aparecer-nas-respostas-de-ia\">como aparecer nas respostas de IA</a>.</p>"
+faqIntro: "<h2>Antes de pensar em anúncio dentro da IA</h2>
+
+  <p>Existe um trabalho anterior e mais barato: ser recomendado organicamente quando alguém pergunta. O que decide isso não é truque de otimização, é ficha de produto completa, review e validação de terceiros. Está em <a href=\"/aparecer-nas-respostas-de-ia\">como aparecer nas respostas de IA</a>.</p>"
 faq:
   - q: "O que é o ChatGPT Ads?"
     a: "É o gerenciador de anúncios da OpenAI, que permite anunciar dentro das conversas do ChatGPT. A estrutura é familiar para quem já roda mídia: campanha, grupo e anúncio, com criação de pixel, eventos de conversão, públicos por e-mail e telefone e suporte a feed de produtos parecido com o do Google Merchant Center."

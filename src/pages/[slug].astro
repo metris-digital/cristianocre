@@ -1,16 +1,16 @@
 ---
 // Página de cada post do blog e de cada episódio do podcast, montada a partir
 // de src/content/insights e src/content/podcast.
-import { getCollection, render } from 'astro:content';
+import { existsSync } from 'node:fs';
+import { render } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import { publicados } from '../lib/posts';
 import {
   SITE, AUTOR, dataPorExtenso, dataIso, linkMetris, comDestaque, semDestaque, textoPuro,
 } from '../lib/site';
 
 export async function getStaticPaths() {
-  const publicado = ({ data }: { data: { draft: boolean } }) => !data.draft;
-  const posts = [...(await getCollection('insights', publicado)), ...(await getCollection('podcast', publicado))];
-  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+  return (await publicados()).map((post) => ({ params: { slug: post.id }, props: { post } }));
 }
 
 const { post } = Astro.props;
@@ -21,7 +21,9 @@ const { Content } = await render(post);
 const url = `${SITE}/${slug}`;
 const titulo = semDestaque(d.title);
 const imagem = `${SITE}${d.imagem}`;
-const webp = d.imagem.replace(/\.jpg$/, '.webp');
+const webp = d.imagem.replace(/\.(jpg|png)$/, '.webp');
+// A versão WebP só entra se existir: o upload do CMS grava só JPG ou PNG.
+const temWebp = existsSync(`public${webp}`);
 const publicado = dataIso(d.pubDate);
 const modificado = dataIso(d.updatedDate ?? d.pubDate);
 
@@ -118,7 +120,7 @@ if (d.updatedDate) meta.push(`Atualizado em ${dataPorExtenso(d.updatedDate)}`);
   imagemAlt={titulo}
   publicado={publicado}
   jsonLd={jsonLd}
-  preload={d.capa ? webp : undefined}
+  preload={d.capa && temWebp ? webp : undefined}
   feedYoutube={d.feedYoutube}
 >
 <section class="page-hero post-hero">
@@ -147,7 +149,7 @@ if (d.updatedDate) meta.push(`Atualizado em ${dataPorExtenso(d.updatedDate)}`);
     {d.capa && !d.video && (
       <figure class="post-cover reveal">
         <picture>
-          <source srcset={webp} type="image/webp">
+          {temWebp && <source srcset={webp} type="image/webp">}
           <img src={d.imagem} alt={d.capaAlt ?? titulo} width="1200" height="675" loading="eager" fetchpriority="high" decoding="async">
         </picture>
         {d.legenda && <figcaption set:html={d.legenda} />}

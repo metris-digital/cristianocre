@@ -14,7 +14,7 @@ legenda: "A segunda compra, a troca e o balanço honesto: o que decide o resulta
 pilar:
   titulo: "/black-friday-para-ecommerce"
   url: "/black-friday-para-ecommerce"
-ldExtra: {"about":{"@type":"Event","name":"Black Friday 2026","startDate":"2026-11-27","eventAttendanceMode":"https://schema.org/OnlineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"VirtualLocation","url":"https://www.cristianocre.com"}},"isPartOf":{"@type":"WebPage","@id":"https://www.cristianocre.com/black-friday-para-ecommerce"}}
+ldExtra: { "about": { "@type": "Event", "name": "Black Friday 2026", "startDate": "2026-11-27", "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": { "@type": "VirtualLocation", "url": "https://www.cristianocre.com" } }, "isPartOf": { "@type": "WebPage", "@id": "https://www.cristianocre.com/black-friday-para-ecommerce" } }
 faq:
   - q: "A Black Friday dá lucro?"
     a: "Sozinha, raramente. Você compra tráfego no momento mais caro do ano e vende com o menor preço do ano. Ela faz sentido financeiro quando é tratada como aquisição, e o resultado se mede pela segunda compra em dezembro e janeiro."

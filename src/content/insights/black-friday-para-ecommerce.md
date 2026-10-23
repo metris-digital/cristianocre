@@ -10,7 +10,7 @@ leitura: 11
 imagem: "/img/black-friday-para-ecommerce.jpg"
 capa: true
 legenda: "Como preparar o seu e-commerce para a Black Friday 2026: as datas, as sete frentes que decidem o resultado e o cronograma de 90, 60 e 30 dias."
-ldExtra: {"about":{"@type":"Event","name":"Black Friday 2026","startDate":"2026-11-27","eventAttendanceMode":"https://schema.org/OnlineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"VirtualLocation","url":"https://www.cristianocre.com"}}}
+ldExtra: { "about": { "@type": "Event", "name": "Black Friday 2026", "startDate": "2026-11-27", "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": { "@type": "VirtualLocation", "url": "https://www.cristianocre.com" } } }
 faq:
   - q: "Quando é a Black Friday 2026?"
     a: "Sexta, 27 de novembro de 2026. A Cyber Monday cai em 30 de novembro, e o Natal em 25 de dezembro. Na prática, o período de venda começa nas primeiras semanas de novembro, com o que o mercado chama de esquenta, e só termina depois das trocas de janeiro."

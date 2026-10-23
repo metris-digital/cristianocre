@@ -14,7 +14,7 @@ legenda: "O checklist da Black Friday organizado por janela de tempo, de agosto 
 pilar:
   titulo: "/black-friday-para-ecommerce"
   url: "/black-friday-para-ecommerce"
-ldExtra: {"about":{"@type":"Event","name":"Black Friday 2026","startDate":"2026-11-27","eventAttendanceMode":"https://schema.org/OnlineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"VirtualLocation","url":"https://www.cristianocre.com"}},"isPartOf":{"@type":"WebPage","@id":"https://www.cristianocre.com/black-friday-para-ecommerce"}}
+ldExtra: { "about": { "@type": "Event", "name": "Black Friday 2026", "startDate": "2026-11-27", "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": { "@type": "VirtualLocation", "url": "https://www.cristianocre.com" } }, "isPartOf": { "@type": "WebPage", "@id": "https://www.cristianocre.com/black-friday-para-ecommerce" } }
 faq:
   - q: "Quando devo começar o checklist de Black Friday?"
     a: "Em agosto, ou seja, cerca de 90 dias antes. A janela de agosto e setembro concentra as decisões irreversíveis, como margem por produto, teto de desconto, meta de verba e prazo de fornecedor. O que vem depois é produção e execução."

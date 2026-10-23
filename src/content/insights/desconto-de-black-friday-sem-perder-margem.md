@@ -14,7 +14,7 @@ legenda: "A conta que define até onde o desconto pode ir antes de virar prejuí
 pilar:
   titulo: "/black-friday-para-ecommerce"
   url: "/black-friday-para-ecommerce"
-ldExtra: {"about":{"@type":"Event","name":"Black Friday 2026","startDate":"2026-11-27","eventAttendanceMode":"https://schema.org/OnlineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"VirtualLocation","url":"https://www.cristianocre.com"}},"isPartOf":{"@type":"WebPage","@id":"https://www.cristianocre.com/black-friday-para-ecommerce"}}
+ldExtra: { "about": { "@type": "Event", "name": "Black Friday 2026", "startDate": "2026-11-27", "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "location": { "@type": "VirtualLocation", "url": "https://www.cristianocre.com" } }, "isPartOf": { "@type": "WebPage", "@id": "https://www.cristianocre.com/black-friday-para-ecommerce" } }
 faq:
   - q: "Qual o desconto máximo que posso dar na Black Friday?"
     a: "O teto é a sua margem de contribuição do produto, ou seja, o que sobra do preço depois de custo do produto, imposto, taxa de pagamento, comissão, frete e embalagem. Desconto acima disso é venda no prejuízo, e quanto mais você vende, mais perde."

@@ -8,7 +8,7 @@ pubDate: 2026-09-10
 updatedDate: 2026-09-10
 leitura: 9
 imagem: "/img/roas-alto-pode-ser-problema.jpg"
-ldExtra: {"publisher":{"@type":"Organization","name":"Metris","url":"https://metris.digital"}}
+ldExtra: { "publisher": { "@type": "Organization", "name": "Metris", "url": "https://metris.digital" } }
 estiloAntigo: true
 faqTitulo: "O que mais perguntam sobre isso"
 faq:
