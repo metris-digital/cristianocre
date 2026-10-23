@@ -6,6 +6,14 @@ const CC_PIXEL='942431053282816';
 // Eventos padrao da Meta vao em fbq('track'); os nossos vao em fbq('trackCustom').
 const CC_EVENTOS_PADRAO=['PageView','Lead','Subscribe','Contact','Schedule','ViewContent','CompleteRegistration','InitiateCheckout','Purchase'];
 
+// Consentimento (LGPD): a escolha fica em localStorage ('cc-consentimento') e o
+// <head> de cada pagina ja aplica o estado inicial ao Google e ao Pixel. Sem
+// aceite, nada vai para a Meta pelo servidor (API de Conversoes) tambem.
+const CC_CONSENTIMENTO='cc-consentimento';
+function consentiu(){
+  try{ return localStorage.getItem(CC_CONSENTIMENTO)==='aceito'; }catch(e){ return false; }
+}
+
 // Id unico por evento. E ele que deixa a Meta juntar o disparo do navegador com o
 // do servidor e contar UMA conversao, em vez de duas.
 function novoEventId(){
@@ -48,10 +56,12 @@ function track(gaEvent, gaParams, fbEvent, fbParams, eventId){
 // requisicao sobrevive a navegacao quando o clique leva a pessoa para fora do site.
 function trackServidor(gaEvent, gaParams, fbEvent, fbParams){
   const id=track(gaEvent, gaParams, fbEvent, fbParams);
+  if(!consentiu()) return id;
   try{
     fetch('/api/capi',{
       method:'POST', headers:{'Content-Type':'application/json'}, keepalive:true,
       body:JSON.stringify({
+        consentiu:true,
         event_name:fbEvent,
         event_id:id,
         content_name:(fbParams&&fbParams.content_name)||'',
@@ -164,7 +174,7 @@ function bindLeadForm(form){
       const resp=await fetch('/api/inscrever',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({nome,email,telefone:fone,segmento,material,empresa:hp.value,origem:(location.pathname+location.search),event_id:eventId,event_name:eventoMeta})
+        body:JSON.stringify({nome,email,telefone:fone,segmento,material,empresa:hp.value,origem:(location.pathname+location.search),event_id:eventId,event_name:eventoMeta,consentiu:consentiu()})
       });
       const data=await resp.json().catch(()=>({ok:false}));
       if(data.ok){
@@ -342,7 +352,9 @@ document.querySelectorAll('.vthumb').forEach(btn=>{
     document.body.style.overflow = 'hidden';
     store.set('cc_xp_visto', String(Date.now()));
     setTimeout(()=>{ const i=form.querySelector('input'); if(i) i.focus({preventScroll:true}); }, 120);
-    trackServidor('popup_saida_exibido', {variante:key, origem:path}, 'ViewContent', {content_name:V.material});
+    // Evento proprio: ViewContent e para ver produto ou pagina de oferta, e misturar
+    // exibicao de pop-up com isso suja o sinal. PopupExibido nao otimiza campanha.
+    trackServidor('popup_saida_exibido', {variante:key, origem:path}, 'PopupExibido', {content_name:V.material});
   }
   function fechar(){
     if (!aberto) return;
@@ -394,7 +406,7 @@ document.querySelectorAll('.vthumb').forEach(btn=>{
     try{
       await fetch('/api/inscrever', {
         method:'POST', headers:{'Content-Type':'application/json'}, keepalive:true,
-        body: JSON.stringify({ nome, email, telefone: fone, material: V.material, origem: path, empresa: form.empresa.value, event_id: eventId, event_name: 'LeadPopup' })
+        body: JSON.stringify({ nome, email, telefone: fone, material: V.material, origem: path, empresa: form.empresa.value, event_id: eventId, event_name: 'LeadPopup', consentiu: consentiu() })
       });
     }catch(e){}
 
@@ -496,5 +508,108 @@ document.querySelectorAll('.vthumb').forEach(btn=>{
 
 // Origem do clique nos CTAs da LP, para saber qual posicao converte.
 document.querySelectorAll('a[href="#inscricao"][data-cta]').forEach(a=>{
-  a.addEventListener('click',()=> track('clique_cta_evento',{origem:a.dataset.cta,evento:'A Black da Performance'},'ViewContent',{content_name:'A Black da Performance'}));
+  a.addEventListener('click',()=> track('clique_cta_evento',{origem:a.dataset.cta,evento:'A Black da Performance'},'CliqueCTAEvento',{content_name:'A Black da Performance',origem:a.dataset.cta}));
 });
+
+// ===== Aviso de cookies (LGPD) =====
+// Mesmo comportamento do metris.digital: aparece ate a pessoa escolher.
+// "Aceitar" libera os cookies de analise e de anuncio (GA4 e Pixel da Meta);
+// "Recusar" mantem so os essenciais. A escolha atualiza o Google e a Meta na
+// hora, sem recarregar. O link "Preferencias de cookies" do rodape
+// (classe js-lgpd-abrir) reabre o aviso. Nas paginas de captura ele e
+// compacto no celular, para nao cobrir o formulario.
+(function(){
+  const captura=!!document.querySelector('form.matform, form.evform');
+  const aviso=document.createElement('div');
+  aviso.className='lgpd'+(captura?' lgpd--compacto':'');
+  aviso.id='lgpd';
+  aviso.setAttribute('role','dialog');
+  aviso.setAttribute('aria-labelledby','lgpd-titulo');
+  aviso.setAttribute('aria-live','polite');
+  aviso.hidden=true;
+  aviso.innerHTML='<div class="lgpd__in">'
+    + '<p class="lgpd__txt"><strong id="lgpd-titulo">Cookies neste site.</strong> '
+    +   '<span class="lgpd__longo">Uso cookies essenciais para o site funcionar e, com a sua permissão, cookies de análise e de anúncio (Google e Meta) para medir visitas e melhorar campanhas. Saiba mais na <a href="/privacidade#cookies">Política de Privacidade</a>.</span>'
+    +   (captura?'<span class="lgpd__curto">Com a sua permissão, meço visitas e anúncios. <a href="/privacidade#cookies">Saiba mais</a></span>':'')
+    + '</p>'
+    + '<div class="lgpd__acoes">'
+    +   '<button type="button" class="lgpd__btn lgpd__btn--linha" data-lgpd="recusado">Recusar</button>'
+    +   '<button type="button" class="lgpd__btn lgpd__btn--ok" data-lgpd="aceito">Aceitar</button>'
+    + '</div></div>';
+  document.body.appendChild(aviso);
+
+  const ler=function(){ try{ return localStorage.getItem(CC_CONSENTIMENTO); }catch(e){ return null; } };
+
+  function aplicar(escolha){
+    const ok=escolha==='aceito'?'granted':'denied';
+    try{
+      if(typeof gtag==='function') gtag('consent','update',{ad_storage:ok,ad_user_data:ok,ad_personalization:ok,analytics_storage:ok});
+    }catch(e){}
+    try{ if(typeof fbq==='function') fbq('consent', escolha==='aceito'?'grant':'revoke'); }catch(e){}
+    window.ccConsentiu=escolha==='aceito';
+  }
+
+  aviso.querySelectorAll('[data-lgpd]').forEach(function(botao){
+    botao.addEventListener('click',function(){
+      const escolha=botao.getAttribute('data-lgpd');
+      try{ localStorage.setItem(CC_CONSENTIMENTO, escolha); }catch(e){}
+      aplicar(escolha);
+      aviso.hidden=true;
+      // Avisa o CTA fixo das paginas de captura, que so aparece depois da escolha.
+      window.dispatchEvent(new CustomEvent('lgpd:respondido'));
+    });
+  });
+
+  document.querySelectorAll('.js-lgpd-abrir').forEach(function(link){
+    link.addEventListener('click',function(e){ e.preventDefault(); aviso.hidden=false; });
+  });
+
+  // So aparece depois que a Sora carregou: trocar de fonte com o aviso na
+  // tela muda a altura dele e conta como salto de layout (CLS). Se a fonte
+  // demorar, aparece assim mesmo depois de 2 s.
+  if(ler()) return;
+  const mostrar=function(){ if(!ler()) aviso.hidden=false; };
+  if(document.fonts && document.fonts.load){
+    const limite=setTimeout(mostrar,2000);
+    Promise.all(['400','600','700'].map(function(p){ return document.fonts.load(p+' 1em Sora'); }))
+      .then(function(){ clearTimeout(limite); mostrar(); }, function(){ clearTimeout(limite); mostrar(); });
+  }else{
+    mostrar();
+  }
+})();
+
+// ===== CTA fixo no celular, nas paginas de material =====
+// Aparece quando o botao do topo sai da tela e some quando o formulario esta
+// visivel. Leva direto ao formulario. Espera a resposta ao aviso de cookies,
+// para os dois nao disputarem o rodape da tela.
+(function(){
+  const form=document.querySelector('form.matform');
+  const secao=form && form.closest('section[id]');
+  const botaoTopo=document.querySelector('.page-hero a.btn-green[href^="#"]');
+  if(!form || !secao || !botaoTopo) return;
+
+  // "Material gratuito · Planilha" vira duas linhas, para caber no celular.
+  const selo=document.querySelector('.page-hero .pill');
+  const partes=(selo?selo.textContent:'Material gratuito').split('·').map(function(t){ return t.trim(); });
+  const barra=document.createElement('div');
+  barra.className='cta-fixo';
+  barra.innerHTML='<div class="cta-fixo-in">'
+    + '<div class="txt"><b>'+partes[0]+'</b><span>'+(partes[1]?partes[1]+' · ':'')+'leva 1 minuto</span></div>'
+    + '<a href="#'+secao.id+'" class="btn btn-green btn-sm">'+botaoTopo.innerHTML+'</a>'
+    + '</div>';
+  document.body.appendChild(barra);
+  barra.querySelector('a').addEventListener('click',function(){
+    track('clique_cta_fixo',{origem:location.pathname},'CliqueCTAFixo',{content_name:form.dataset.material||''});
+  });
+
+  let topoVisivel=true, formVisivel=false;
+  let liberado=(function(){ try{ return !!localStorage.getItem(CC_CONSENTIMENTO); }catch(e){ return true; } })();
+  function pintar(){
+    const mostrar=liberado && !topoVisivel && !formVisivel;
+    barra.classList.toggle('on',mostrar);
+    document.body.classList.toggle('cta-bar',mostrar);
+  }
+  new IntersectionObserver(function(es){ es.forEach(function(e){ topoVisivel=e.isIntersecting||e.boundingClientRect.top>0; }); pintar(); },{threshold:0}).observe(botaoTopo);
+  new IntersectionObserver(function(es){ es.forEach(function(e){ formVisivel=e.isIntersecting; }); pintar(); },{threshold:0}).observe(secao);
+  window.addEventListener('lgpd:respondido',function(){ liberado=true; pintar(); });
+})();

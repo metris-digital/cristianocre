@@ -13,7 +13,7 @@ export const PAGINAS_FIXAS: { url: string; lastmod?: string; changefreq?: string
   { url: "/como-montar-um-ecommerce", lastmod: "2026-08-02", changefreq: "monthly", priority: "0.8" },
   { url: "/mentoria", lastmod: "2026-08-01" },
   { url: "/termos", lastmod: "2026-07-25" },
-  { url: "/privacidade", lastmod: "2026-07-25" },
+  { url: "/privacidade", lastmod: "2026-10-23" },
   { url: "/cases", lastmod: "2026-08-01" },
   { url: "/case-malacara", lastmod: "2026-08-01" },
   { url: "/case-vinhos-collection", lastmod: "2026-08-01" },

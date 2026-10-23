@@ -12,12 +12,12 @@
 //   META_CAPI_TOKEN       obrigatório. Sem ele, o envio é ignorado em silêncio.
 //   META_PIXEL_ID         opcional. Default: o pixel que está no HTML do site.
 //   META_TEST_EVENT_CODE  opcional. Só para o painel "Testar eventos" do Gerenciador.
-//   META_API_VERSION      opcional. Default v21.0.
+//   META_API_VERSION      opcional. Default v26.0 (a mais nova em 23/10/2026).
 
 const crypto = require('crypto');
 
 const PIXEL_PADRAO = '942431053282816';
-const VERSAO_PADRAO = 'v21.0';
+const VERSAO_PADRAO = 'v26.0';
 const TIMEOUT_MS = 3000;
 
 function env(nome, padrao) {
@@ -92,10 +92,18 @@ function montarUserData(req, pessoa, urlDaPagina) {
   const ud = {};
 
   const em = hash(normalizarEmail(p.email));
-  if (em) ud.em = [em];
+  if (em) {
+    ud.em = [em];
+    // external_id: o e-mail criptografado identifica a mesma pessoa entre
+    // eventos e visitas, o que aumenta a taxa de correspondência.
+    ud.external_id = [em];
+  }
 
-  const ph = hash(normalizarTelefone(p.telefone));
+  const telefone = normalizarTelefone(p.telefone);
+  const ph = hash(telefone);
   if (ph) ud.ph = [ph];
+  // País só quando é certo: telefone brasileiro (55). Não se presume pelo site.
+  if (telefone.startsWith('55')) ud.country = [hash('br')];
 
   const partes = normalizarNome(p.nome).split(/\s+/).filter(Boolean);
   if (partes.length) {

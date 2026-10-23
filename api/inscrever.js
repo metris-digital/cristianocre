@@ -171,9 +171,11 @@ module.exports = async function handler(req, res) {
         detalhe: dados && dados.message ? String(dados.message).slice(0, 300) : ''
       });
     }
-    // CAPI: só depois que o lead foi gravado de verdade. enviarEvento nunca lança
-    // e tem timeout curto, então a resposta ao navegador não fica presa esperando a Meta.
-    const capi = await enviarEvento(req, {
+    // CAPI: só depois que o lead foi gravado de verdade, e só com o aceite de
+    // cookies (LGPD): sem ele, o lead vai para o Notion e nada vai para a Meta.
+    // enviarEvento nunca lança e tem timeout curto, então a resposta ao navegador
+    // não fica presa esperando a Meta.
+    const capi = corpo.consentiu !== true ? { ok: false, motivo: 'sem_consentimento' } : await enviarEvento(req, {
       event_name: eventoMeta,
       event_id: eventId,
       event_source_url: origem ? `https://www.cristianocre.com${origem.startsWith('/') ? origem : '/' + origem}` : '',

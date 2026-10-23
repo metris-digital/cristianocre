@@ -763,3 +763,58 @@ footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:64px 0 30px
   .ev-sticky .btn{padding:11px 15px;font-size:13.5px}
 }
 @media(prefers-reduced-motion:reduce){.ev-sticky{transition:none}}
+
+/* ---- Aviso de cookies (LGPD), o mesmo do metris.digital nas cores daqui ---- */
+.lgpd{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;display:flex;justify-content:center;pointer-events:none}
+.lgpd[hidden]{display:none}
+.lgpd__in{
+  pointer-events:auto;width:100%;max-width:920px;display:flex;align-items:center;gap:20px;
+  padding:18px 22px;border-radius:14px;background:var(--bg-soft);color:var(--text);
+  border:1px solid rgba(255,255,255,.14);box-shadow:0 18px 50px rgba(0,0,0,.45);
+}
+.lgpd__txt{margin:0;font-size:13.5px;line-height:1.5;color:var(--muted)}
+.lgpd__txt strong{color:var(--text)}
+.lgpd__txt a{color:var(--text);text-decoration:underline}
+.lgpd__acoes{display:flex;gap:10px;flex-shrink:0}
+.lgpd__btn{font:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:10px;cursor:pointer;border:0}
+.lgpd__btn--ok{background:var(--green);color:var(--green-ink)}
+.lgpd__btn--ok:hover{background:var(--green-bright)}
+.lgpd__btn--linha{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.35)}
+.lgpd__btn--linha:hover{border-color:var(--text)}
+.lgpd__curto{display:none}
+@media(max-width:700px){
+  .lgpd__in{flex-direction:column;align-items:stretch;gap:14px}
+  .lgpd__acoes>*{flex:1}
+  /* Paginas de captura: faixa baixa, texto curto e os dois botoes do mesmo peso */
+  .lgpd--compacto{left:10px;right:10px;bottom:10px}
+  .lgpd--compacto .lgpd__in{flex-direction:row;align-items:center;gap:12px;padding:12px 12px 12px 16px}
+  .lgpd--compacto .lgpd__txt{font-size:12.5px;line-height:1.4}
+  .lgpd--compacto .lgpd__longo{display:none}
+  .lgpd--compacto .lgpd__curto{display:inline}
+  .lgpd--compacto .lgpd__acoes{flex-direction:column;gap:6px}
+  .lgpd--compacto .lgpd__btn{padding:8px 14px;font-size:12.5px;border-radius:8px}
+  .lgpd--compacto .lgpd__btn--ok{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.35)}
+}
+
+/* ---- CTA fixo no celular, nas paginas de material ---- */
+.cta-fixo{
+  position:fixed;left:0;right:0;bottom:0;z-index:95;display:none;
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));
+  background:rgba(7,11,22,.94);backdrop-filter:blur(14px);border-top:1px solid var(--line);
+  transform:translateY(110%);transition:transform .3s var(--ease);
+}
+.cta-fixo.on{transform:translateY(0)}
+.cta-fixo-in{display:flex;align-items:center;gap:12px;max-width:var(--maxw);margin:0 auto}
+.cta-fixo .txt{min-width:0}
+.cta-fixo .txt b{display:block;font-size:13.5px;font-weight:800;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cta-fixo .txt span{display:block;margin-top:1px;font-size:11.5px;font-weight:700;color:var(--green);white-space:nowrap}
+.cta-fixo .btn{margin-left:auto;flex-shrink:0;width:auto} /* no celular todo .btn tem 100%; aqui não */
+@media(max-width:980px){
+  .cta-fixo{display:block}
+  body.cta-bar .wa-float{bottom:88px}
+}
+@media(max-width:380px){
+  .cta-fixo .txt b{font-size:12.5px}
+  .cta-fixo .btn{padding:11px 15px;font-size:13.5px}
+}
+@media(prefers-reduced-motion:reduce){.cta-fixo{transition:none}}

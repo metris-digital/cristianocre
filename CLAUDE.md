@@ -51,7 +51,27 @@ Site cristianocre.com. Estrutura, publicação e variáveis: [README.md](README.
 10. **`npm run build` passa antes de enviar.** As funções de `api/` são
     CommonJS: o `package.json` não pode ganhar `"type": "module"`.
 
+## Consentimento (LGPD), igual ao metris.digital
+
+- O `<head>` de toda página (no `Base.astro` e nas páginas de `public/`)
+  começa com o consentimento negado (Consent Mode v2 do Google e
+  `fbq('consent','revoke')`), **antes** do `gtag('config')` e do
+  `fbq('init')`. Página nova em `public/` precisa do mesmo trecho.
+- O aviso vem do `app.js`. A escolha fica em `localStorage`
+  (`cc-consentimento`). O link "Preferências de cookies" do rodapé (classe
+  `js-lgpd-abrir`) reabre o aviso.
+- **Sem aceite, nada vai para a Meta, nem pelo servidor:** `/api/inscrever` e
+  `/api/capi` só chamam a API de Conversões com `consentiu: true`. O lead vai
+  para o Notion do mesmo jeito.
+- Ferramenta nova de análise ou anúncio exige atualizar a seção 5
+  (`#cookies`) de `public/privacidade.html`.
+- Nas páginas de material (formulário `.matform`), o `app.js` cria o CTA fixo
+  do celular. Ele só aparece depois da resposta ao aviso de cookies.
+
 ## Diagnóstico do Pixel da Meta
+
+- Navegador automatizado (Puppeteer, Chrome sem tela) não dispara o Pixel.
+  Para testar, use um Chrome comum ou troque a identificação do navegador.
 
 - O painel "Eventos de teste" da Meta pode mostrar a URL errada. Confira o
   campo `dl` no DevTools (Network → `facebook.com/tr`), não o painel.

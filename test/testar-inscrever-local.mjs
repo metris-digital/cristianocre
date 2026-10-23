@@ -115,7 +115,33 @@ for (const [entrada, esperado] of [
   checar(`"${entrada}" vira "${esperado || 'nada'}"`, obtido === esperado, `obtido "${obtido}"`);
 }
 
-console.log('\n7. Erro do Notion');
+console.log('\n7. Consentimento (LGPD) e API de Conversões');
+{
+  const chamadas = [];
+  globalThis.fetch = async (url, opcoes) => {
+    chamadas.push({ url, corpo: JSON.parse(opcoes.body) });
+    return { ok: true, status: 200, json: async () => ({ id: 'pagina-fake-123', events_received: 1 }) };
+  };
+  process.env.META_CAPI_TOKEN = 'token-de-teste';
+  const lead = { nome: 'Cristiano Creczyenski', email: 'a@b.com', telefone: '54999047085', event_id: 'e1' };
+  const paraMeta = () => chamadas.filter((c) => String(c.url).includes('graph.facebook.com'));
+
+  let r = await chamar('POST', lead);
+  checar('sem aceite, grava no Notion', r.json.ok === true && chamadas.some((c) => c.url === 'https://api.notion.com/v1/pages'));
+  checar('sem aceite, nada vai para a Meta', paraMeta().length === 0 && r.json.capi === 'sem_consentimento', `capi=${r.json.capi}`);
+
+  chamadas.length = 0;
+  r = await chamar('POST', { ...lead, consentiu: true });
+  const meta = paraMeta()[0];
+  const ud = meta ? meta.corpo.data[0].user_data : {};
+  checar('com aceite, envia para a Meta', r.json.capi === 'enviado' && Boolean(meta), `capi=${r.json.capi}`);
+  checar('usa a API v26.0', meta && meta.url.includes('/v26.0/'));
+  checar('external_id é o e-mail criptografado', ud.external_id && ud.em && ud.external_id[0] === ud.em[0]);
+  checar('país só com telefone brasileiro', Array.isArray(ud.country) && ud.country[0].length === 64);
+  delete process.env.META_CAPI_TOKEN;
+}
+
+console.log('\n8. Erro do Notion');
 {
   globalThis.fetch = async () => ({ ok: false, status: 400, json: async () => ({ message: 'property does not exist' }) });
   const r = await chamar('POST', { email: 'a@b.com' });

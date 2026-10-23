@@ -26,10 +26,20 @@ const {
   imagem, imagemAlt, publicado, jsonLd, preload, feedYoutube = false,
 } = Astro.props;
 
-// Global de propósito: o app.js chama gtag() e fbq().
+// Global de propósito: o app.js chama gtag() e fbq(). O consentimento entra
+// antes do gtag('config') e do fbq('init'): é ele que segura os dois até o aceite.
 const scriptGa4 = `
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  // Consentimento (LGPD): sem aceite registrado, analise e anuncio comecam negados.
+  // O aviso que pede a escolha vem do app.js.
+  (function(){
+    var e = null;
+    try { e = localStorage.getItem('cc-consentimento'); } catch (x) {}
+    var ok = e === 'aceito' ? 'granted' : 'denied';
+    gtag('consent', 'default', { ad_storage: ok, ad_user_data: ok, ad_personalization: ok, analytics_storage: ok, functionality_storage: 'granted', security_storage: 'granted', wait_for_update: 500 });
+    window.ccConsentiu = e === 'aceito';
+  })();
   gtag('js', new Date());
   gtag('config', '${GA4}');
 `;
@@ -42,6 +52,7 @@ const scriptPixel = `
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
+  if (!window.ccConsentiu) fbq('consent', 'revoke');
   fbq('init', '${PIXEL_META}');
   fbq('track', 'PageView');
 `;

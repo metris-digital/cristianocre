@@ -15,7 +15,8 @@
 const { enviarEvento, configurado } = require('./_meta.js');
 
 // Só estes eventos são aceitos. Qualquer outro nome é recusado.
-const EVENTOS_PERMITIDOS = ['Contact', 'Schedule', 'ViewContent', 'Subscribe', 'LeadPopup'];
+// PopupExibido substituiu o ViewContent da exibição do pop-up (23/10/2026).
+const EVENTOS_PERMITIDOS = ['Contact', 'Schedule', 'PopupExibido', 'Subscribe', 'LeadPopup'];
 
 function limpar(s, max) {
   return String(s == null ? '' : s).replace(/\s+/g, ' ').trim().slice(0, max || 200);
@@ -49,7 +50,7 @@ module.exports = async function handler(req, res) {
       pixel: (process.env.META_PIXEL_ID || '942431053282816'),
       modoTeste: Boolean(process.env.META_TEST_EVENT_CODE),
       eventos: EVENTOS_PERMITIDOS,
-      versao: '2026-09-09'
+      versao: '2026-10-23'
     });
   }
 
@@ -64,6 +65,10 @@ module.exports = async function handler(req, res) {
   let corpo = req.body;
   if (typeof corpo === 'string') { try { corpo = JSON.parse(corpo); } catch (e) { corpo = {}; } }
   if (!corpo || typeof corpo !== 'object') corpo = {};
+
+  // LGPD: sem o aceite de cookies, nada vai para a Meta. O app.js já não chama
+  // esta rota sem aceite; a checagem aqui garante o mesmo para quem chamar direto.
+  if (corpo.consentiu !== true) return res.status(200).json({ ok: true, ignorado: 'sem_consentimento' });
 
   const evento = limpar(corpo.event_name, 40);
   if (!EVENTOS_PERMITIDOS.includes(evento)) {
