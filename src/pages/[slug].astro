@@ -1,5 +1,6 @@
 ---
-// Página de cada post do blog, montada a partir de src/content/insights.
+// Página de cada post do blog e de cada episódio do podcast, montada a partir
+// de src/content/insights e src/content/podcast.
 import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import {
@@ -7,7 +8,8 @@ import {
 } from '../lib/site';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('insights', ({ data }) => !data.draft);
+  const publicado = ({ data }: { data: { draft: boolean } }) => !data.draft;
+  const posts = [...(await getCollection('insights', publicado)), ...(await getCollection('podcast', publicado))];
   return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
 }
 
@@ -24,14 +26,15 @@ const publicado = dataIso(d.pubDate);
 const modificado = dataIso(d.updatedDate ?? d.pubDate);
 
 const externo = (link: string) => /^https?:\/\//.test(link);
-const linkChamada = d.chamada.link.startsWith('https://metris.digital')
+const linkChamada = d.chamada.link.startsWith('https://metris.digital') && !d.chamada.link.includes('?')
   ? linkMetris(d.chamada.link, slug)
   : d.chamada.link;
 
 const trilha = [
   { nome: 'Home', url: `${SITE}/` },
   { nome: 'Insights', url: `${SITE}/insights` },
-  ...(d.pilar ? [{ nome: d.pilar.titulo, url: `${SITE}${d.pilar.url}` }] : []),
+  // A trilha usa a página; o isPartOf pode apontar para um trecho dela (#serie).
+  ...(d.pilar ? [{ nome: d.pilar.titulo, url: `${SITE}${d.pilar.url.split('#')[0]}` }] : []),
   { nome: titulo, url },
 ];
 
@@ -62,7 +65,9 @@ const jsonLd = {
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
       ...(d.pilar ? { isPartOf: { '@id': `${SITE}${d.pilar.url}` } } : {}),
       ...(d.tema ? { about: { '@type': 'Thing', name: d.tema } } : {}),
+      ...d.ldExtra,
     },
+    ...(d.videoDados ? [dadosDoVideo(d.videoDados)] : []),
     {
       '@type': 'FAQPage',
       mainEntity: d.faq.map((f) => ({
@@ -78,7 +83,30 @@ const jsonLd = {
   ],
 };
 
+function dadosDoVideo(v: NonNullable<typeof d.videoDados>) {
+  const yt = `https://www.youtube.com/watch?v=${v.id}`;
+  return {
+    '@type': 'VideoObject',
+    name: v.nome,
+    description: v.descricao,
+    thumbnailUrl: [`https://i.ytimg.com/vi/${v.id}/maxresdefault.jpg`, `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`],
+    ...(v.data ? { uploadDate: dataIso(v.data) } : {}),
+    contentUrl: yt,
+    embedUrl: `https://www.youtube.com/embed/${v.id}`,
+    inLanguage: 'pt-BR',
+    isFamilyFriendly: true,
+    publisher: { '@type': 'Organization', name: v.canal, logo: { '@type': 'ImageObject', url: `${SITE}/metris-icon.png` } },
+    creator: { '@type': 'Person', name: AUTOR.nome },
+    potentialAction: {
+      '@type': 'SeekToAction',
+      target: `${yt}&t={seek_to_second_number}`,
+      'startOffset-input': 'required name=seek_to_second_number',
+    },
+  };
+}
+
 const meta = [AUTOR.cargo, `Leitura de ${d.leitura} min`];
+if (d.mostrarPublicado) meta.push(`Publicado em ${dataPorExtenso(d.pubDate)}`);
 if (d.updatedDate) meta.push(`Atualizado em ${dataPorExtenso(d.updatedDate)}`);
 ---
 <Base
@@ -108,13 +136,19 @@ if (d.updatedDate) meta.push(`Atualizado em ${dataPorExtenso(d.updatedDate)}`);
   </div>
 </section>
 
-<section class="section" style="padding-top:24px">
+<section class="section" style={d.estiloAntigo ? undefined : 'padding-top:24px'}>
   <div class="wrap">
-    {d.capa && (
+    {d.video && (
+      <figure class="post-cover reveal">
+        <button class="vthumb" data-yt={d.video} style={`background-image:url('https://i.ytimg.com/vi/${d.video}/maxresdefault.jpg')`} aria-label={d.videoRotulo}><span class="play"></span></button>
+        {d.legenda && <figcaption set:html={d.legenda} />}
+      </figure>
+    )}
+    {d.capa && !d.video && (
       <figure class="post-cover reveal">
         <picture>
           <source srcset={webp} type="image/webp">
-          <img src={d.imagem} alt={titulo} width="1200" height="675" loading="eager" fetchpriority="high" decoding="async">
+          <img src={d.imagem} alt={d.capaAlt ?? titulo} width="1200" height="675" loading="eager" fetchpriority="high" decoding="async">
         </picture>
         {d.legenda && <figcaption set:html={d.legenda} />}
       </figure>
@@ -151,9 +185,10 @@ if (d.updatedDate) meta.push(`Atualizado em ${dataPorExtenso(d.updatedDate)}`);
   <div class="wrap">
     <div class="sec-head center reveal">
       {d.faqSelo && <span class="pill"><span class="dot"></span>{d.faqSelo}</span>}
+      {d.faqIntro && <Fragment set:html={d.faqIntro} />}
       <h2>{d.faqTitulo}</h2>
     </div>
-    <div class="faq reveal" style="max-width:760px;margin:0 auto">
+    <div class="faq reveal" style={d.estiloAntigo ? undefined : 'max-width:760px;margin:0 auto'}>
       {d.faq.map((f) => (
         <details><summary set:html={`${f.q}<span class="pm"></span>`} /><div class="ans" set:html={f.a} /></details>
       ))}

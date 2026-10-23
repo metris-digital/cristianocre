@@ -11,15 +11,15 @@ import { glob } from 'astro/loaders';
  */
 const link = z.object({ titulo: z.string(), url: z.string() });
 
-const insights = defineCollection({
-  loader: glob({ base: './src/content/insights', pattern: '*.md' }),
-  schema: z.object({
+const post = z.object({
     // Título da página (H1). O trecho entre asteriscos ganha o destaque em
     // degradê: "Consultoria de e-commerce: *quando vale a pena*".
     title: z.string(),
-    // Título da aba e do Google. Acima de 70 caracteres o Google corta.
-    seoTitle: z.string().max(70),
-    description: z.string().min(80).max(170),
+    // Título da aba e do Google, e a descrição que aparece embaixo dele. O
+    // Google corta acima de uns 70 e 160 caracteres. Os tetos aqui são largos
+    // para não quebrar o build com texto antigo; o aviso fica com o CMS.
+    seoTitle: z.string().max(120),
+    description: z.string().min(80).max(260),
     selo: z.string(),
     sub: z.string(),
     pubDate: z.coerce.date(),
@@ -30,14 +30,42 @@ const insights = defineCollection({
     imagem: z.string(),
     // Mostra a imagem no topo do post. Precisa da versão .webp ao lado.
     capa: z.boolean().default(false),
+    // Texto alternativo da capa. Em branco, usa o título.
+    capaAlt: z.string().optional(),
     legenda: z.string().optional(),
+    // Capa em vídeo no lugar da imagem: o ID do vídeo no YouTube (o trecho
+    // depois de watch?v=). A miniatura vem do próprio YouTube.
+    video: z.string().optional(),
+    videoRotulo: z.string().default('Assistir ao episódio'),
+    // Dados do vídeo para o Google (VideoObject), quando o post tem vídeo na
+    // capa ou no texto. Data é a de publicação no YouTube.
+    videoDados: z
+      .object({
+        id: z.string(),
+        nome: z.string(),
+        descricao: z.string(),
+        data: z.coerce.date().optional(),
+        canal: z.string().default('Metris'),
+      })
+      .optional(),
 
     // Página pilar do assunto: entra na trilha de navegação e nos dados
-    // estruturados (isPartOf).
+    // estruturados (isPartOf). O endereço pode ter um trecho: /podcast#serie.
     pilar: link.optional(),
     tema: z.string().optional(),
     rich: z.boolean().default(false),
+    // Dados estruturados extras do artigo (evento, empresa, pessoas citadas),
+    // em JSON. Mesclados por cima dos que o molde gera. Campo técnico.
+    ldExtra: z.record(z.any()).optional(),
 
+    // Mostra "Publicado em" na linha do autor.
+    mostrarPublicado: z.boolean().default(false),
+    // Posts da primeira leva, sem o espaçamento ajustado no topo e no FAQ.
+    // Não use em post novo.
+    estiloAntigo: z.boolean().default(false),
+
+    // Título e texto acima do título do FAQ, em HTML (raro).
+    faqIntro: z.string().optional(),
     faqSelo: z.string().nullable().default('Perguntas frequentes'),
     faqTitulo: z.string().default('Perguntas frequentes'),
     faq: z.array(z.object({ q: z.string(), a: z.string() })).min(1),
@@ -73,7 +101,17 @@ const insights = defineCollection({
 
     feedYoutube: z.boolean().default(false),
     draft: z.boolean().default(false),
-  }),
 });
 
-export const collections = { insights };
+const insights = defineCollection({
+  loader: glob({ base: './src/content/insights', pattern: '*.md' }),
+  schema: post,
+});
+
+// Episódios do podcast: mesma página e mesmos campos de um post.
+const podcast = defineCollection({
+  loader: glob({ base: './src/content/podcast', pattern: '*.md' }),
+  schema: post,
+});
+
+export const collections = { insights, podcast };

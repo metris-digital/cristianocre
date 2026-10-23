@@ -9,12 +9,14 @@
 import fs from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { parse } from 'node-html-parser';
+import { decodeHTML } from 'entities';
 
 const BRANCH = 'main-cristianocre';
+const PASTAS = ['src/content/insights', 'src/content/podcast'];
 const pedidos = process.argv.slice(2);
 const slugs = pedidos.length
   ? pedidos
-  : fs.readdirSync('src/content/insights').filter((f) => f.endsWith('.md')).map((f) => f.replace(/\.md$/, ''));
+  : PASTAS.flatMap((p) => fs.readdirSync(p).filter((f) => f.endsWith('.md')).map((f) => f.replace(/\.md$/, '')));
 
 // Atributos que o molde novo padronizou de propósito. O id dos títulos é o
 // âncora que o Astro cria (/post#secao).
@@ -22,6 +24,13 @@ const IGNORAR_ATRIBUTOS = new Set(['fetchpriority', 'loading', 'id']);
 // Blocos que passaram a ser iguais em todos os posts: o card do autor tinha
 // 11 versões escritas à mão.
 const IGNORAR_BLOCOS = ['author-card'];
+
+// dist/ velho compara a página original com ela mesma e dá falso "igual".
+const md = Math.max(...PASTAS.flatMap((p) => fs.readdirSync(p).map((f) => fs.statSync(`${p}/${f}`).mtimeMs)));
+if (!fs.existsSync('dist') || fs.statSync('dist').mtimeMs < md) {
+  console.error('O dist/ é mais velho que os posts. Rode npm run build antes.');
+  process.exit(1);
+}
 
 let falhas = 0;
 for (const slug of slugs) {
@@ -52,6 +61,7 @@ function compararHead(a, b) {
     ['ld:datePublished', (d) => artigo(d)?.datePublished],
     ['ld:dateModified', (d) => artigo(d)?.dateModified],
     ['ld:isPartOf', (d) => artigo(d)?.isPartOf?.['@id']],
+    ['ld:video', (d) => JSON.stringify(ld(d).filter((n) => n['@type'] === 'VideoObject').map((v) => [v.name, v.contentUrl, v.uploadDate, v.publisher?.name]))],
     ['ld:faq', (d) => ld(d).find((n) => n['@type'] === 'FAQPage')?.mainEntity.length],
     ['pixel', (d) => (d.toString().match(/fbq\('init', '(\d+)'\)/) || [])[1]],
     ['ga4', (d) => (d.toString().match(/gtag\('config', '([^']+)'\)/) || [])[1]],
@@ -59,11 +69,31 @@ function compararHead(a, b) {
     ['youtube-feed.js', (d) => String(d.toString().includes('youtube-feed.js'))],
   ];
   const out = [];
+  // Tipo de dado estruturado que existia e sumiu. (BlogPosting virou Article
+  // e a trilha BreadcrumbList entrou em todos, de propósito.)
+  const tipos = (d) => new Set(ld(d).map((n) => (n['@type'] === 'BlogPosting' ? 'Article' : n['@type'])));
+  const novos = tipos(db);
+  for (const t of tipos(da)) if (!novos.has(t)) out.push(`head ld: sumiu o ${t}`);
+  // Propriedade dos dados estruturados que existia e sumiu (thumbnailUrl
+  // virou lista com os dois tamanhos, de propósito).
+  const tipo = (n) => (n['@type'] === 'BlogPosting' ? 'Article' : n['@type']);
+  for (const n of ld(da)) {
+    const m = ld(db).find((x) => tipo(x) === tipo(n));
+    const agora = new Set(m ? caminhos(m) : []);
+    for (const c of new Set(caminhos(n)))
+      if (!agora.has(c) && !c.startsWith('.thumbnailUrl')) out.push(`head ld: ${tipo(n)} perdeu ${c}`);
+  }
   for (const [nome, ler] of campos) {
     const va = ler(da), vb = ler(db);
     if (String(va) !== String(vb)) out.push(`head ${nome}: antes ${JSON.stringify(va)} | agora ${JSON.stringify(vb)}`);
   }
   return out;
+}
+
+function caminhos(o, p = '') {
+  if (typeof o !== 'object' || o === null) return [p];
+  if (Array.isArray(o)) return o.flatMap((x) => caminhos(x, `${p}[]`));
+  return Object.entries(o).flatMap(([k, v]) => caminhos(v, `${p}.${k}`));
 }
 
 function ld(d) {
@@ -123,15 +153,5 @@ function linhas(no) {
 }
 
 function decodificar(t) {
-  return t
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&middot;/g, '·')
-    .replace(/&copy;/g, '©')
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&#(\d+);/g, (_, c) => String.fromCodePoint(Number(c)))
-    .replace(/&#x([0-9a-f]+);/gi, (_, c) => String.fromCodePoint(parseInt(c, 16)))
-    .replace(/&amp;/g, '&');
+  return decodeHTML(t);
 }
