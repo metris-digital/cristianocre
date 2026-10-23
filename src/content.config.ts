@@ -12,8 +12,8 @@ import { glob } from 'astro/loaders';
 const link = z.object({ titulo: z.string(), url: z.string() });
 
 const post = z.object({
-    // Título da página (H1). O trecho entre asteriscos ganha o destaque em
-    // degradê: "Consultoria de e-commerce: *quando vale a pena*".
+    // Título da página (H1). O trecho entre asteriscos fica em verde:
+    // "Consultoria de e-commerce: *quando vale a pena*".
     title: z.string(),
     // Título da aba e do Google, e a descrição que aparece embaixo dele. O
     // Google corta acima de uns 70 e 160 caracteres. Os tetos aqui são largos

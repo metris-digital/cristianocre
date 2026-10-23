@@ -44,7 +44,7 @@ export function linkMetris(url: string, campanha: string, meio = 'blog'): string
   return `${url}${sep}utm_source=cristianocre&utm_medium=${meio}&utm_campaign=${campanha}`;
 }
 
-/** "texto com *destaque*" → HTML com o destaque em degradê. */
+/** "texto com *destaque*" → HTML com o destaque em verde. */
 export function comDestaque(texto: string): string {
   return escapar(texto).replace(/\*([^*]+)\*/g, '<span class="accent">$1</span>');
 }

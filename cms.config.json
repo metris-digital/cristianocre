@@ -17,7 +17,7 @@
       "campoRascunho": "draft",
       "colunas": ["title", "categoria", "pubDate"],
       "campos": [
-        { "nome": "title", "rotulo": "Título da página", "tipo": "texto", "obrigatorio": true, "max": 110, "ajuda": "O título grande do topo. O trecho entre asteriscos ganha o destaque em degradê: Consultoria de e-commerce: *quando vale a pena*." },
+        { "nome": "title", "rotulo": "Título da página", "tipo": "texto", "obrigatorio": true, "max": 110, "ajuda": "O título grande do topo. O trecho entre asteriscos fica em verde: Consultoria de e-commerce: *quando vale a pena*." },
         { "nome": "seoTitle", "rotulo": "Título para o Google", "tipo": "texto", "obrigatorio": true, "max": 80, "ajuda": "Aparece na aba e no Google. Acima de 70 caracteres o Google corta." },
         { "nome": "description", "rotulo": "Descrição para o Google", "tipo": "texto-longo", "obrigatorio": true, "min": 80, "max": 200, "ajuda": "O texto embaixo do título no Google. Acima de 160 caracteres ele corta." },
         { "nome": "selo", "rotulo": "Selo do topo", "tipo": "texto", "obrigatorio": true, "ajuda": "Ex.: Conversão · Checkout" },
@@ -84,7 +84,7 @@
       "campoRascunho": "draft",
       "colunas": ["title", "pubDate"],
       "campos": [
-        { "nome": "title", "rotulo": "Título da página", "tipo": "texto", "obrigatorio": true, "max": 110, "ajuda": "O trecho entre asteriscos ganha o destaque em degradê." },
+        { "nome": "title", "rotulo": "Título da página", "tipo": "texto", "obrigatorio": true, "max": 110, "ajuda": "O trecho entre asteriscos fica em verde." },
         { "nome": "seoTitle", "rotulo": "Título para o Google", "tipo": "texto", "obrigatorio": true, "max": 80, "ajuda": "Acima de 70 caracteres o Google corta." },
         { "nome": "description", "rotulo": "Descrição para o Google", "tipo": "texto-longo", "obrigatorio": true, "min": 80, "max": 200, "ajuda": "Acima de 160 caracteres o Google corta." },
         { "nome": "selo", "rotulo": "Selo do topo", "tipo": "texto", "obrigatorio": true, "ajuda": "Ex.: Podcast · Episódio 008" },
