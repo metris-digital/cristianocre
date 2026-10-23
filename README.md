@@ -54,7 +54,7 @@ No texto do post:
 ## Trabalhar no site
 
 ```bash
-git clone https://github.com/cristianocre/cristianocre.git ~/PROJETOS/CRISTIANOCRE-SITE
+git clone https://github.com/metris-digital/cristianocre.git ~/PROJETOS/CRISTIANOCRE-SITE
 cd ~/PROJETOS/CRISTIANOCRE-SITE
 npm install
 ```
