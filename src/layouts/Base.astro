@@ -1,0 +1,105 @@
+---
+// Esqueleto de toda página gerada pelo Astro: GA4, Pixel da Meta, SEO do
+// <head>, topo e rodapé. Os scripts ficam com is:inline para sair no HTML
+// exatamente como estão, sem o Astro reempacotar.
+import Topo from '../components/Topo.astro';
+import Rodape from '../components/Rodape.astro';
+import { GA4, PIXEL_META } from '../lib/site';
+
+interface Props {
+  titulo: string;
+  descricao: string;
+  canonico: string;
+  ogTipo?: string;
+  ogTitulo?: string;
+  ogDescricao?: string;
+  imagem?: string;
+  imagemAlt?: string;
+  publicado?: string;
+  jsonLd?: object;
+  preload?: string;
+  feedYoutube?: boolean;
+}
+
+const {
+  titulo, descricao, canonico, ogTipo = 'website', ogTitulo = titulo, ogDescricao = descricao,
+  imagem, imagemAlt, publicado, jsonLd, preload, feedYoutube = false,
+} = Astro.props;
+
+// Global de propósito: o app.js chama gtag() e fbq().
+const scriptGa4 = `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '${GA4}');
+`;
+const scriptPixel = `
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '${PIXEL_META}');
+  fbq('track', 'PageView');
+`;
+---
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js), GA4 -->
+<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA4}`}></script>
+<script is:inline set:html={scriptGa4} />
+<!-- Meta Pixel Code -->
+<script is:inline set:html={scriptPixel} />
+<noscript><img height="1" width="1" style="display:none" src={`https://www.facebook.com/tr?id=${PIXEL_META}&ev=PageView&noscript=1`}/></noscript>
+<!-- End Meta Pixel Code -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="/metris-icon.png">
+<title>{titulo}</title>
+<meta name="description" content={descricao}>
+<link rel="canonical" href={canonico}>
+<meta name="robots" content="index, follow">
+<meta name="author" content="Cristiano Creczyenski">
+<meta property="og:site_name" content="Cristiano Creczyenski">
+<meta property="og:type" content={ogTipo}>
+<meta property="og:url" content={canonico}>
+<meta property="og:title" content={ogTitulo}>
+<meta property="og:description" content={ogDescricao}>
+{imagem && <>
+<meta property="og:image" content={imagem}>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="og:image:alt" content={imagemAlt}>
+</>}
+{publicado && <>
+<meta property="article:published_time" content={publicado}>
+<meta property="article:author" content="Cristiano Creczyenski">
+</>}
+<meta name="twitter:card" content="summary_large_image">
+{imagem && <meta name="twitter:image" content={imagem}>}
+{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd, null, 2)} />}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+{preload && <link rel="preload" as="image" href={preload} type="image/webp" fetchpriority="high">}
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a href="#main" class="skip">Pular para o conteúdo</a>
+
+<Topo />
+
+<main id="main">
+<slot />
+</main>
+
+<Rodape />
+
+<script is:inline src="/app.js"></script>
+{feedYoutube && <script is:inline src="/youtube-feed.js" defer></script>}
+</body>
+</html>

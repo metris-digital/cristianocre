@@ -1,0 +1,209 @@
+---
+// Página de cada post do blog, montada a partir de src/content/insights.
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import {
+  SITE, AUTOR, dataPorExtenso, dataIso, linkMetris, comDestaque, semDestaque, textoPuro,
+} from '../lib/site';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('insights', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const d = post.data;
+const slug = post.id;
+const { Content } = await render(post);
+
+const url = `${SITE}/${slug}`;
+const titulo = semDestaque(d.title);
+const imagem = `${SITE}${d.imagem}`;
+const webp = d.imagem.replace(/\.jpg$/, '.webp');
+const publicado = dataIso(d.pubDate);
+const modificado = dataIso(d.updatedDate ?? d.pubDate);
+
+const externo = (link: string) => /^https?:\/\//.test(link);
+const linkChamada = d.chamada.link.startsWith('https://metris.digital')
+  ? linkMetris(d.chamada.link, slug)
+  : d.chamada.link;
+
+const trilha = [
+  { nome: 'Home', url: `${SITE}/` },
+  { nome: 'Insights', url: `${SITE}/insights` },
+  ...(d.pilar ? [{ nome: d.pilar.titulo, url: `${SITE}${d.pilar.url}` }] : []),
+  { nome: titulo, url },
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: titulo,
+      description: d.description,
+      image: { '@type': 'ImageObject', url: imagem, width: 1200, height: 675 },
+      datePublished: publicado,
+      dateModified: modificado,
+      author: {
+        '@type': 'Person',
+        name: AUTOR.nome,
+        url: SITE,
+        jobTitle: AUTOR.cargo,
+        image: AUTOR.foto,
+        description: AUTOR.descricao,
+        sameAs: AUTOR.sameAs,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Metris',
+        logo: { '@type': 'ImageObject', url: `${SITE}/metris-icon.png` },
+      },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+      ...(d.pilar ? { isPartOf: { '@id': `${SITE}${d.pilar.url}` } } : {}),
+      ...(d.tema ? { about: { '@type': 'Thing', name: d.tema } } : {}),
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: d.faq.map((f) => ({
+        '@type': 'Question',
+        name: textoPuro(f.q),
+        acceptedAnswer: { '@type': 'Answer', text: textoPuro(f.a) },
+      })),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: trilha.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: t.nome, item: t.url })),
+    },
+  ],
+};
+
+const meta = [AUTOR.cargo, `Leitura de ${d.leitura} min`];
+if (d.updatedDate) meta.push(`Atualizado em ${dataPorExtenso(d.updatedDate)}`);
+---
+<Base
+  titulo={d.seoTitle}
+  descricao={d.description}
+  canonico={url}
+  ogTipo="article"
+  imagem={imagem}
+  imagemAlt={titulo}
+  publicado={publicado}
+  jsonLd={jsonLd}
+  preload={d.capa ? webp : undefined}
+  feedYoutube={d.feedYoutube}
+>
+<section class="page-hero post-hero">
+  <div class="wrap">
+    <span class="pill"><span class="dot"></span>{d.selo}</span>
+    <h1 set:html={comDestaque(d.title)} />
+    <p class="sub" set:html={d.sub} />
+    <div class="byline">
+      <img src="/cristiano.jpg" alt="Cristiano Creczyenski" width="40" height="40" loading="lazy">
+      <div class="bl-txt">
+        <div class="bl-name">Por <a href={AUTOR.linkedin} target="_blank" rel="noopener">Cristiano Creczyenski</a></div>
+        <div class="bl-meta" set:html={meta.join(' &middot; ')} />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:24px">
+  <div class="wrap">
+    {d.capa && (
+      <figure class="post-cover reveal">
+        <picture>
+          <source srcset={webp} type="image/webp">
+          <img src={d.imagem} alt={titulo} width="1200" height="675" loading="eager" fetchpriority="high" decoding="async">
+        </picture>
+        {d.legenda && <figcaption set:html={d.legenda} />}
+      </figure>
+    )}
+    <article class:list={['post', { rich: d.rich }, 'reveal']}>
+      <Content />
+
+      {d.relacionados.length > 0 && (
+        <div class="related">
+          <h3>{d.relacionadosTitulo}</h3>
+          <ul>
+            {d.relacionados.map((r) => <li><a href={r.url}>{r.titulo}</a></li>)}
+          </ul>
+        </div>
+      )}
+
+      <div class="author-card">
+        <img class="ac-photo" src="/cristiano.jpg" alt="Cristiano Creczyenski, CEO da Metris" width="88" height="88" loading="lazy">
+        <div>
+          <div class="ac-role">Sobre o autor</div>
+          <h3>Cristiano Creczyenski</h3>
+          <p>CEO da <a href={linkMetris('https://metris.digital/', slug)} target="_blank" rel="noopener">Metris</a>, Cristiano ajuda empreendedores a crescerem com Estratégia, Marketing de Performance, CRM e I.A. São mais de <b>17 anos de experiência</b> em e-commerce e marketing digital, liderando equipes, agências e projetos para negócios de todos os portes, de startups a multinacionais. Já atuou com marcas como Lojas Colombo, Fila, Umbro, Melissa, Coza, Continental Ferramentas, Vinhos Collection e Pizzato, entre outras.</p>
+          <div class="ac-links">
+            <a href={AUTOR.linkedin} target="_blank" rel="noopener">Perfil no LinkedIn &#8599;</a>
+            <a href="/diagnostico">Fazer um diagnóstico com o Cristiano &#8594;</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      {d.faqSelo && <span class="pill"><span class="dot"></span>{d.faqSelo}</span>}
+      <h2>{d.faqTitulo}</h2>
+    </div>
+    <div class="faq reveal" style="max-width:760px;margin:0 auto">
+      {d.faq.map((f) => (
+        <details><summary set:html={`${f.q}<span class="pm"></span>`} /><div class="ans" set:html={f.a} /></details>
+      ))}
+    </div>
+  </div>
+</section>
+
+{d.guia && (
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal" style="text-align:left;max-width:720px">
+        <span class="pill"><span class="dot"></span>{d.guia.selo}</span>
+        <h2>{d.guia.titulo}</h2>
+        <p set:html={d.guia.texto} />
+      </div>
+      <div class="ilist">
+        {d.guia.itens.map((g) => (
+          <a class="icard reveal" href={g.url}>
+            <span class="ibody">
+              <span class="ichip">{g.chip}</span>
+              <h2>{g.titulo}</h2>
+              <p set:html={g.texto} />
+              <span class="imeta"><span class="igo">Ler o guia <span class="ar">&#8594;</span></span></span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="diag reveal">
+      <div class="diag-grid">
+        <div>
+          <span class="pill"><span class="dot"></span>{d.chamada.selo}</span>
+          <h2 set:html={d.chamada.titulo} />
+          <p set:html={d.chamada.texto} />
+        </div>
+        <aside class="diag-side">
+          <div class="big">{d.chamada.numero}</div>
+          <div class="cap">{d.chamada.numeroLegenda}</div>
+          {externo(linkChamada)
+            ? <a href={linkChamada} class="btn btn-green btn-block" target="_blank" rel="noopener">{d.chamada.botao} <span class="ar">&#8594;</span></a>
+            : <a href={linkChamada} class="btn btn-green btn-block">{d.chamada.botao} <span class="ar">&#8594;</span></a>}
+          <p class="micro" set:html={d.chamada.nota} />
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+</Base>

@@ -1,7 +1,11 @@
 # Arquivos do repositório que não vão para o site no ar.
 # Documentação e rascunhos em markdown
-*.md
+/*.md
 # Testes e ferramentas locais
 /test
 /.env.example
 /.claude
+# Build local (a Vercel gera o seu)
+/dist
+/.astro
+/node_modules

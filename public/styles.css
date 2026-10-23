@@ -360,7 +360,7 @@ footer{border-top:1px solid var(--line-soft);margin-top:40px;padding:64px 0 30px
 .post ul,.post ol{margin:0 0 24px;padding-left:24px;display:flex;flex-direction:column;gap:12px}
 .post li{color:var(--muted);line-height:1.7;font-size:16.5px;padding-left:4px}
 .post li::marker{color:var(--green)}
-.post li b,.post p b{color:var(--text)}
+.post li b,.post p b,.post li strong,.post p strong{color:var(--text)}
 .post a:not(.btn),.rich a:not(.btn){color:var(--green)}
 .post a:not(.btn):hover,.rich a:not(.btn):hover{text-decoration:underline}
 .post .keybox,.rich .keybox{border:1px solid var(--line);border-left:3px solid var(--green);border-radius:12px;padding:18px 22px;margin:6px 0 26px;background:var(--card)}

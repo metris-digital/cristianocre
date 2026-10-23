@@ -26,3 +26,7 @@ _to_delete/
 
 # Claude Code: atalho local para as skills de ~/Desktop/CRISTIANOCRE
 .claude/
+
+# Astro
+dist/
+.astro/
